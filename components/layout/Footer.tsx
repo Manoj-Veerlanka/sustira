@@ -6,7 +6,6 @@ const mainLinks = [
   { label: "Services", href: "/services" },
   { label: "Courses", href: "/courses" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Portfolio", href: "/portfolio" },
   { label: "Contact", href: "/contact" },
 ];
 

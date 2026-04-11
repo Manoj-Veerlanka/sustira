@@ -7,8 +7,7 @@ const navLinks = [
   { label: "Services", href: "/services" },
   { label: "Courses", href: "/courses" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "Contact", href: "/contact" },
+    { label: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -35,13 +34,13 @@ export function Navbar() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
-          <Button href="/contact" label="Book a Demo" />
-           </div>
+         <div className="hidden md:block">
+            <Button href="/book-demo" label="Book a Demo" />
+          </div>
 
-            <div className="md:hidden">
-           <Button href="/contact" label="Demo" />
-            </div>
+          <div className="md:hidden">
+            <Button href="/book-demo" label="Demo" />
+          </div>
 
         </div>
       </Container>
