@@ -14,52 +14,54 @@ export default function AboutPage() {
             </p>
 
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-[#1f1f1a] md:text-6xl">
-              A founder-led platform for practical eco-product learning and growth.
+              A founder-led platform rooted in sustainability, practical learning, and meaningful growth.
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-7 text-[#5f5b53] md:text-lg">
-              Sustira is being built to make chemistry-based eco-product learning
-              more approachable, supportive, and practical for people who want
-              to learn, create, and grow with confidence.
+              Sustira is being built to make eco-product learning more approachable,
+              practical, and supportive for people who want to learn with clarity,
+              create with confidence, and grow with purpose.
             </p>
           </div>
         </Container>
       </section>
 
       <section className="py-16 md:py-24">
-         <Container>
-        <div className="grid gap-10 md:grid-cols-2 md:items-center">
-          <div className="rounded-[32px] bg-[#f4efe6] p-4">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[28px] bg-[#e6dfd2]">
-              <Image
-                src="/images/founder.png"
-                alt="Founder of Sustira"
-                fill
-                className="object-cover"
-                priority
-              />
+        <Container>
+          <div className="grid gap-10 md:grid-cols-2 md:items-center">
+            <div className="rounded-[32px] bg-[#f4efe6] p-4">
+              <div className="overflow-hidden rounded-[28px] bg-[#e6dfd2]">
+                <Image
+                  src="/images/founder.png"
+                  alt="Founder of Sustira"
+                  width={900}
+                  height={1200}
+                  className="h-auto w-full object-contain"
+                  priority
+                />
+              </div>
             </div>
-          </div>
 
             <div>
               <SectionHeading
                 eyebrow="Founder story"
-                title="Built from a desire to make learning more practical and meaningful."
-                description="Sustira is envisioned as a warm, guided platform where learners can move beyond abstract ideas and build confidence through eco-product-focused learning."
+                title="Built from sustainability experience and a desire to make learning more meaningful."
+                description="Sustira reflects a founder-led vision shaped by years of work in environmental sustainability, safety systems, training content, and community-focused initiatives."
               />
 
               <div className="mt-6 space-y-4 text-sm leading-7 text-[#5f5b53] md:text-base">
                 <p>
-                  The idea behind Sustira is to create a space where learning
-                  feels useful, supportive, and connected to real outcomes.
-                  Instead of making knowledge feel distant or overly technical,
-                  the goal is to make it approachable and action-oriented.
+                  The idea behind Sustira is to create a space where learning feels
+                  useful, supportive, and connected to real outcomes. Instead of making
+                  eco-product knowledge feel distant or overly technical, the goal is
+                  to make it warm, practical, and action-oriented.
                 </p>
 
                 <p>
-                  Through practical courses, demo sessions, and product-focused
-                  guidance, Sustira aims to support people who want to explore
-                  eco-friendly product creation with clarity and encouragement.
+                  With experience in sustainability programs, environmental compliance,
+                  digital workflows, and training-led knowledge sharing, the platform is
+                  being shaped to help learners move from curiosity to confidence through
+                  guided learning and real-world relevance.
                 </p>
               </div>
             </div>
@@ -71,7 +73,7 @@ export default function AboutPage() {
         <Container>
           <SectionHeading
             eyebrow="Why Sustira started"
-            title="To connect learning with real eco-product possibilities."
+            title="To connect sustainability, learning, and real eco-product possibilities."
             description="Sustira is not only about understanding concepts. It is about helping learners take meaningful steps toward product awareness, practical skill-building, and future opportunities."
           />
 
@@ -88,11 +90,11 @@ export default function AboutPage() {
 
             <div className="rounded-[28px] bg-white p-6">
               <h3 className="text-xl font-semibold text-[#1f1f1a]">
-                Eco-product vision
+                Sustainability-led thinking
               </h3>
               <p className="mt-3 text-sm leading-6 text-[#5f5b53]">
-                Encourage sustainable thinking through eco-friendly product
-                themes, materials, and future possibilities.
+                Encourage eco-conscious product exploration through environmental
+                awareness, responsible choices, and long-term thinking.
               </p>
             </div>
 
@@ -102,7 +104,7 @@ export default function AboutPage() {
               </h3>
               <p className="mt-3 text-sm leading-6 text-[#5f5b53]">
                 Support learners with a warmer, more human path from curiosity
-                to confidence and action.
+                to confidence, skill-building, and creation.
               </p>
             </div>
           </div>
@@ -115,22 +117,22 @@ export default function AboutPage() {
             <div>
               <SectionHeading
                 eyebrow="Mission & vision"
-                title="A platform that supports learning, creation, and future growth."
-                description="Sustira aims to create a meaningful bridge between learning, eco-conscious product thinking, and guided entrepreneurial direction."
+                title="A platform that supports learning, creation, and eco-conscious growth."
+                description="Sustira aims to create a meaningful bridge between practical learning, sustainability awareness, and product-focused opportunities."
               />
             </div>
 
             <div className="space-y-4 text-sm leading-7 text-[#5f5b53] md:text-base">
               <p>
                 The mission is to make eco-product learning more accessible,
-                supportive, and useful for Indian learners who want practical
-                knowledge and real direction.
+                supportive, and useful for learners who want practical direction
+                and real confidence.
               </p>
 
               <p>
                 The long-term vision is to grow Sustira into a broader ecosystem
-                that supports learning, materials understanding, product
-                exploration, and future community-based opportunities.
+                that supports guided learning, materials understanding, product
+                exploration, sustainability awareness, and community-led growth.
               </p>
             </div>
           </div>
