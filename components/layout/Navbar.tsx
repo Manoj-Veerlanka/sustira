@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 
@@ -15,11 +16,15 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur-md">
       <Container>
         <div className="flex h-20 items-center justify-between gap-6">
-          <Link
-            href="/"
-            className="text-2xl font-semibold tracking-tight text-neutral-900"
-          >
-            Sustira
+           <Link href="/" className="flex items-center">
+            <Image
+              src="/images/sustira-logo.png"
+              alt="Sustira"
+              width={180}
+              height={56}
+              className="h-auto w-[160px] md:w-[180px]"
+              priority
+            />
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">
