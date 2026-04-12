@@ -1,4 +1,5 @@
 import Button from "@/components/ui/Button";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -8,7 +9,15 @@ export default function FounderSection() {
       <Container>
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div className="rounded-[32px] bg-[#f4efe6] p-4">
-            <div className="aspect-[4/5] w-full rounded-[28px] bg-[#e6dfd2]" />
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[28px]">
+              <Image
+                src="/images/founder.png"
+                alt="Founder of Sustira"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
 
           <div>
