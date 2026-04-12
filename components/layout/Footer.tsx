@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 
 const mainLinks = [
@@ -6,7 +7,6 @@ const mainLinks = [
   { label: "Services", href: "/services" },
   { label: "Courses", href: "/courses" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Portfolio", href: "/portfolio" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -21,16 +21,23 @@ export function Footer() {
   return (
     <footer className="border-t border-black/5 bg-[#f8f6f1]">
       <Container>
-        <div className="grid gap-12 py-14 md:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <h3 className="text-2xl font-semibold tracking-tight text-neutral-900">
-              Sustira
-            </h3>
-            <p className="mt-4 max-w-xs text-sm leading-6 text-neutral-600">
-              Premium eco-product chemistry learning and launch support for
-              founders, makers, and curious learners.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 gap-10 py-16 items-start md:grid-cols-2 lg:grid-cols-4">
+          <div className="flex flex-col items-start lg:-mt-1">
+  <Link href="/" className="inline-flex items-center">
+    <Image
+      src="/images/sustira-logo.png"
+      alt="Sustira"
+      width={190}
+      height={60}
+      className="h-auto w-[150px] md:w-[170px]"
+    />
+  </Link>
+
+  <p className="mt-5 max-w-xs text-sm leading-8 text-[#5f5b53]">
+    Premium eco-product chemistry learning and launch support for founders,
+    makers, and curious learners.
+  </p>
+</div>
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-[0.16em] text-neutral-900">

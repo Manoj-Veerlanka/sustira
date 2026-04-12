@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 
@@ -7,8 +8,7 @@ const navLinks = [
   { label: "Services", href: "/services" },
   { label: "Courses", href: "/courses" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "Contact", href: "/contact" },
+    { label: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -16,11 +16,15 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur-md">
       <Container>
         <div className="flex h-20 items-center justify-between gap-6">
-          <Link
-            href="/"
-            className="text-2xl font-semibold tracking-tight text-neutral-900"
-          >
-            Sustira
+           <Link href="/" className="flex items-center">
+            <Image
+              src="/images/sustira-logo.png"
+              alt="Sustira"
+              width={180}
+              height={56}
+              className="h-auto w-[160px] md:w-[180px]"
+              priority
+            />
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">
@@ -35,13 +39,13 @@ export function Navbar() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
-          <Button href="/contact" label="Book a Demo" />
-           </div>
+         <div className="hidden md:block">
+            <Button href="/book-demo" label="Book a Demo" />
+          </div>
 
-            <div className="md:hidden">
-           <Button href="/contact" label="Demo" />
-            </div>
+          <div className="md:hidden">
+            <Button href="/book-demo" label="Demo" />
+          </div>
 
         </div>
       </Container>
