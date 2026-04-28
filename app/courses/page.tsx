@@ -1,142 +1,248 @@
+import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
-import SectionHeading from "@/components/ui/SectionHeading";
-import Link from "next/link";
 
-const courses = [
+const focusAreas = [
   {
-    slug: "chemical-free-soap-making",
-    title: "Chemical-free Soap Making",
+    title: "Environment – Solar Power Energy",
     description:
-      "Learn the basics of eco-conscious soap making through practical, guided sessions focused on ingredients, process, and product understanding.",
-    demoFee: "Demo ₹299",
-    level: "Beginner Friendly",
+      "Learn how to harness renewable energy through solar power solutions. This course introduces fundamentals of solar systems, practical applications, and how individuals and small businesses can adopt clean energy for sustainable living and cost savings.",
   },
   {
-    slug: "organic-pickle-making",
-    title: "Organic Pickle Making",
+    title: "Health – Healthy Seasonal Pickles",
     description:
-      "Explore practical pickle-making methods, material understanding, and product-focused learning in a simple and approachable format.",
-    demoFee: "Demo ₹299",
-    level: "Hands-on Learning",
+      "Discover the art of making traditional, chemical-free seasonal pickles using natural ingredients. This program blends nutrition, preservation techniques, and entrepreneurship, helping you create healthy food products rooted in Indian heritage.",
   },
   {
-    slug: "eco-product-development",
-    title: "Eco-Product Development",
+    title: "Safety – SAP EHS Course Guidance",
     description:
-      "Understand how eco-product ideas connect with materials, product thinking, and guided development direction.",
-    demoFee: "Coming Soon",
-    level: "Product Focused",
-  },
-  {
-    slug: "eco-business-plan-basics",
-    title: "Eco-Business Plan Basics",
-    description:
-      "Get introduced to the early thinking needed to move from product learning toward eco-business possibilities and launch awareness.",
-    demoFee: "Coming Soon",
-    level: "Growth Oriented",
+      "Step into the world of Environmental Health & Safety with structured guidance on SAP EHS modules. Designed for students and professionals, this course connects safety, compliance, and digital systems to real industry opportunities.",
   },
 ];
 
-const faqs = [
-  "Who can join these courses?",
-  "Are demos paid?",
-  "Do I need prior chemistry knowledge?",
-  "Will materials be provided?",
+const courses = [
+  {
+    slug: "solar-energy-initiative",
+    sector: "Environment Sector",
+    title: "Solar Energy Initiative",
+    description:
+      "Learn basics of solar energy and its importance as alternate energy.",
+    suitableFor:
+      "Entrepreneurs, engineers, and learners who want to promote alternate energy sources.",
+    demoFee: "₹499",
+    image: "/images/courses/solar-energy.png",
+  },
+  {
+    slug: "organic-seasonal-healthy-pickles",
+    sector: "Health Sector",
+    title: "Organic Seasonal Healthy Pickles and Vadiyas",
+    description: "How can a healthy seasonal organic product be made?",
+    suitableFor: "Entrepreneurs, homemakers, and curious learners.",
+    demoFee: "₹199",
+    image: "/images/courses/healthy-pickles.png",
+  },
+  {
+    slug: "sap-ehs-basic-course-guidance",
+    sector: "Safety Sector",
+    title: "SAP EHS Basic Course Guidance",
+    description: "SAP EHS course highlights and basic foundation guidance.",
+    suitableFor:
+      "Students, professionals, compliance learners, and EHS aspirants.",
+    demoFee: "₹299",
+    image: "/images/courses/sap-ehs.png",
+  },
+  {
+    slug: "chemical-free-soap-making",
+    sector: "Health / Product",
+    title: "Chemical-Free Soap Making",
+    description:
+      "Learn the basics of soap-making, ingredients, process understanding, and practical product awareness.",
+    suitableFor:
+      "Beginners, homemakers, product enthusiasts, and aspiring small-scale creators.",
+    demoFee: "Coming Soon",
+    image: "/images/courses/soap-making.png",
+  },
+  {
+    slug: "eco-product-basics",
+    sector: "General",
+    title: "Eco Product Basics",
+    description:
+      "Explore foundational concepts in eco-friendly product creation and sustainable material thinking.",
+    suitableFor: "Beginners and curious learners exploring eco-product ideas.",
+    demoFee: "Coming Soon",
+    image: "/images/courses/eco-product-basics.png",
+  },
+  {
+    slug: "beginner-product-business-basics",
+    sector: "General",
+    title: "Beginner Product Business Basics",
+    description:
+      "Get introduced to practical thinking around taking a skill toward a possible product-based opportunity.",
+    suitableFor:
+      "Early-stage learners, aspiring creators, and beginners curious about product-based opportunities.",
+    demoFee: "Coming Soon",
+    image: "/images/courses/business-basics.png",
+  },
 ];
 
 export default function CoursesPage() {
   return (
     <main className="bg-[#fcfaf5]">
-      <section className="py-16 md:py-24">
+      {/* Hero */}
+<section className="py-16 md:py-24">
+  <Container>
+    <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+      {/* Left content */}
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#2f6b45]">
+          Courses
+        </p>
+
+        <h1 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-[#1f1f1a] md:text-5xl xl:text-6xl">
+          Learn. Create. Sustain.
+        </h1>
+
+        <p className="mt-8 max-w-2xl text-base leading-8 text-[#5f5b53] md:text-lg">
+          Whether you want to build a green business, learn new skills, or
+          contribute to the environment — Sustira gives you the tools to create
+          real impact.
+        </p>
+      </div>
+
+      {/* Right image */}
+      <div className="flex justify-center lg:justify-end">
+        <div className="relative h-[260px] w-full max-w-[520px] overflow-hidden rounded-[36px] bg-[#f4efe6] shadow-sm ring-1 ring-[#e7e0d4] md:h-[340px]">
+          <Image
+            src="/images/courses/coursehero.png"
+            alt="Eco-product learning with natural materials"
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 520px"
+            className="object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
+
+      {/* Focus Areas */}
+      <section className="py-16 md:py-20">
         <Container>
           <div className="max-w-3xl">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#2f6b45]">
-              Courses
+              Our Focus Areas
             </p>
 
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-[#1f1f1a] md:text-6xl">
-              Explore practical eco-product learning paths.
-            </h1>
-
-            <p className="mt-6 max-w-2xl text-base leading-7 text-[#5f5b53] md:text-lg">
-              Sustira’s courses are designed to make learning more approachable,
-              guided, and connected to real product understanding.
-            </p>
+            <h2 className="text-3xl font-semibold leading-tight tracking-tight text-[#1f1f1a] md:text-4xl">
+              Explore learning paths across environment, health, and safety.
+            </h2>
           </div>
-        </Container>
-      </section>
 
-      <section className="py-16 md:py-24">
-        <Container>
-          <SectionHeading
-            eyebrow="Available learning tracks"
-            title="Start with a course that matches your interest."
-            description="These early course directions reflect Sustira’s practical, eco-conscious, and guided learning approach."
-          />
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {courses.map((course) => (
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {focusAreas.map((area) => (
               <div
-                key={course.slug}
+                key={area.title}
                 className="rounded-[28px] border border-[#e7e0d4] bg-white p-6"
               >
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="rounded-full bg-[#e8f2ec] px-3 py-1 text-xs font-medium text-[#2f6b45]">
-                    {course.demoFee}
-                  </span>
-                  <span className="rounded-full bg-[#f4efe6] px-3 py-1 text-xs font-medium text-[#5f5b53]">
-                    {course.level}
-                  </span>
-                </div>
+                <h3 className="text-xl font-semibold text-[#1f1f1a]">
+                  {area.title}
+                </h3>
 
-                <h2 className="mt-5 text-2xl font-semibold text-[#1f1f1a]">
-                  {course.title}
-                </h2>
-
-                <p className="mt-4 text-sm leading-6 text-[#5f5b53]">
-                  {course.description}
+                <p className="mt-4 text-sm leading-7 text-[#5f5b53]">
+                  {area.description}
                 </p>
-
-                <div className="mt-6">
-                  <Link
-                    href={`/courses/${course.slug}`}
-                    className="inline-flex items-center text-sm font-medium text-[#2f6b45] transition hover:opacity-80"
-                  >
-                    View details →
-                  </Link>
-                </div>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="bg-[#f4efe6] py-16 md:py-24">
+      {/* Course Listings */}
+      <section className="py-16 md:py-20">
         <Container>
-          <div className="grid gap-10 md:grid-cols-2">
-            <div>
-              <SectionHeading
-                eyebrow="Before you join"
-                title="A few common questions learners may have."
-                description="These are some of the early questions users often want answered before booking a demo or exploring a course."
-              />
-            </div>
+          <div className="max-w-3xl">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#2f6b45]">
+              Course Listings
+            </p>
 
-            <div className="space-y-4">
-              {faqs.map((faq) => (
-                <div
-                  key={faq}
-                  className="rounded-[22px] bg-white px-5 py-4 text-sm font-medium text-[#1f1f1a]"
-                >
-                  {faq}
+            <h2 className="text-3xl font-semibold leading-tight tracking-tight text-[#1f1f1a] md:text-4xl">
+              Choose a course that matches your interest and goals.
+            </h2>
+          </div>
+
+          <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {courses.map((course) => (
+              <article
+                key={course.slug}
+                className="flex h-full flex-col overflow-hidden rounded-[28px] border border-[#e7e0d4] bg-white"
+              >
+                <div className="h-[260px] w-full overflow-hidden">
+                  <Image
+                    src={course.image}
+                    alt={course.title}
+                    width={1200}
+                    height={900}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
-              ))}
-            </div>
+
+                <div className="flex flex-1 flex-col p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#2f6b45]">
+                    {course.sector}
+                  </p>
+
+                  <h3 className="mt-4 min-h-[72px] text-2xl font-semibold leading-tight text-[#1f1f1a]">
+                    {course.title}
+                  </h3>
+
+                  <p className="mt-4 min-h-[72px] text-sm leading-6 text-[#5f5b53]">
+                    {course.description}
+                  </p>
+
+                  <div className="mt-5 min-h-[112px]">
+                    <p className="text-sm font-medium text-[#1f1f1a]">
+                      Suitable for
+                    </p>
+                    <p className="mt-1 text-sm leading-6 text-[#5f5b53]">
+                      {course.suitableFor}
+                    </p>
+                  </div>
+
+                  <div className="mt-auto">
+                    <div className="flex items-center justify-between rounded-2xl bg-[#f4efe6] px-4 py-3">
+                      <span className="text-sm font-medium text-[#5f5b53]">
+                        Demo Fee
+                      </span>
+                      <span className="text-sm font-semibold text-[#1f1f1a]">
+                        {course.demoFee}
+                      </span>
+                    </div>
+
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <Link
+                        href={`/courses/${course.slug}`}
+                        className="inline-flex items-center justify-center rounded-full border border-[#d9d0c2] px-5 py-3 text-sm font-medium text-[#1f1f1a] transition hover:bg-[#f4efe6]"
+                      >
+                        View Details
+                      </Link>
+
+                      <Button
+                        href="/book-demo"
+                        label="Book Demo"
+                        variant="primary"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </Container>
       </section>
 
+      {/* CTA */}
       <section className="py-16 md:py-24">
         <Container>
           <div className="rounded-[32px] bg-[#2f6b45] px-6 py-10 text-white md:px-10 md:py-14">
@@ -145,17 +251,21 @@ export default function CoursesPage() {
             </p>
 
             <h2 className="mt-4 max-w-2xl text-3xl font-semibold leading-tight md:text-4xl">
-              Choose a course and begin with a guided demo.
+              Start with a demo before you decide.
             </h2>
 
             <p className="mt-4 max-w-2xl text-sm leading-6 text-white/85 md:text-base">
-              Start small, understand the learning style, and find the path that
-              fits your interest best.
+              Explore the course details, understand the topic, and book a demo
+              to find the right path for you.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button label="Book a Demo" href="/book-demo" variant="secondary" />
-              <Button label="Contact Us" href="/contact" variant="secondary" />
+              <Button
+                href="/book-demo"
+                label="Book a Demo"
+                variant="secondary"
+              />
+              <Button href="/contact" label="Contact Us" variant="secondary" />
             </div>
           </div>
         </Container>
