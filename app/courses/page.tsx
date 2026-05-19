@@ -36,7 +36,7 @@ const courses = [
   {
     slug: "organic-seasonal-healthy-pickles",
     sector: "Health Sector",
-    title: "Organic Seasonal Healthy Pickles and Vadiyas",
+    title: "Organic Seasonal Healthy Pickles",
     description: "How can a healthy seasonal organic product be made?",
     suitableFor: "Entrepreneurs, homemakers, and curious learners.",
     demoFee: "₹199",
