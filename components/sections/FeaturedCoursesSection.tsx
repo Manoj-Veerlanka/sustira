@@ -2,43 +2,63 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-const services = [
+const courses = [
   {
     number: "01",
-    title: "Chemical-free Soap Making",
-    href: "/courses",
+    title: "Solar Energy Initiative",
+    href: "/courses/solar-energy-initiative",
     tags: [
-      { label: "Hands-on", tone: "green" },
-      { label: "Demo ₹299", tone: "gold" },
+      { label: "Environment", tone: "green" },
+      { label: "Demo ₹499", tone: "gold" },
     ],
   },
   {
     number: "02",
-    title: "Organic Pickle Making",
-    href: "/courses",
+    title: "SAP EHS Beginner Course Guidance",
+    href: "/courses/sap-ehs-basic-course-guidance",
     tags: [
-      { label: "Hands-on", tone: "green" },
-      { label: "Beginner", tone: "teal" },
+      { label: "Safety", tone: "green" },
+      { label: "Demo ₹299", tone: "gold" },
     ],
   },
-  {
+   {
     number: "03",
-    title: "Eco-Product Development",
-    href: "/services",
+    title: "Beginner Product Business Guidance",
+    href: "/courses/beginner-product-business-basics",
     tags: [
-      { label: "Business", tone: "teal" },
-      { label: "Mentored", tone: "gold" },
+      { label: "Business", tone: "green" },
+      { label: "Guidance", tone: "gold" },
     ],
   },
   {
     number: "04",
-    title: "Eco-Business Guidance",
-    href: "/services",
+    title: "Organic Seasonal Healthy Pickles",
+    href: "/courses/organic-seasonal-healthy-pickles",
     tags: [
-      { label: "Launch", tone: "green" },
-      { label: "Community", tone: "gold" },
+      { label: "Health", tone: "teal" },
+      { label: "Coming Soon", tone: "teal" },
     ],
   },
+  
+  {
+    number: "05",
+    title: "Chemical-Free Soap Making",
+    href: "/courses/chemical-free-soap-making",
+    tags: [
+      { label: "Product", tone: "teal" },
+      { label: "Coming Soon", tone: "teal" },
+    ],
+  },
+  {
+    number: "06",
+    title: "Eco Product Development",
+    href: "/courses/eco-product-basics",
+    tags: [
+      { label: "Basics", tone: "teal" },
+      { label: "Coming Soon", tone: "teal" },
+    ],
+  },
+ 
 ];
 
 type TagTone = "green" | "gold" | "teal";
@@ -54,38 +74,38 @@ export default function FeaturedCoursesSection() {
     <section className="py-16 md:py-24">
       <Container>
         <SectionHeading
-          eyebrow="What We Offer"
-          title="A warm, practical path into eco-product learning."
-          description="Sustira supports learners through courses, demo sessions, product guidance, and eco-business direction in a simple and supportive way."
+          eyebrow="Featured Courses"
+          title="Explore practical courses designed for eco-product learning."
+          description="Sustira offers beginner-friendly learning paths across environment, health, safety, product creation, and eco-business guidance."
           align="center"
         />
 
         <div className="mt-12 border-t border-black/10">
-          {services.map((service) => (
+          {courses.map((course) => (
             <Link
-              key={service.number}
-              href={service.href}
-              className="group grid grid-cols-1 gap-4 border-b border-black/10 py-6 transition-all duration-300 hover:bg-[#f7f1e7] hover:px-4 md:grid-cols-[72px_1fr_auto] md:items-center"
+              key={course.number}
+              href={course.href}
+              className="group grid grid-cols-1 gap-4 border-b border-black/10 py-6 transition-all duration-300 hover:bg-[#f7f1e7] md:grid-cols-[72px_1fr_360px] md:items-center md:px-0 md:hover:px-4"
             >
               <div className="text-sm font-semibold tracking-[0.08em] text-[#8b8b80]">
-                {service.number}
+                {course.number}
               </div>
 
               <h3 className="text-xl font-semibold tracking-tight text-[#1f1f1a] transition-colors duration-300 group-hover:text-[#2f6b45] md:text-2xl">
-                {service.title}
+                {course.title}
               </h3>
 
-              <div className="flex items-center justify-between gap-4 md:justify-end">
-                <div className="flex flex-wrap gap-2">
-                  {service.tags.map((tag) => (
-                    <span
-                      key={tag.label}
-                      className={`rounded-full px-3 py-1 text-xs font-medium tracking-[0.03em] ${tagToneClasses[tag.tone as TagTone]}`}
-                    >
-                      {tag.label}
-                    </span>
-                  ))}
-                </div>
+              <div className="grid items-center gap-3 md:grid-cols-[120px_150px_24px] md:justify-end">
+                {course.tags.map((tag) => (
+                  <span
+                    key={tag.label}
+                    className={`inline-flex h-8 items-center justify-center rounded-full px-4 text-xs font-medium tracking-[0.03em] ${
+                      tagToneClasses[tag.tone as TagTone]
+                    }`}
+                  >
+                    {tag.label}
+                  </span>
+                ))}
 
                 <span className="text-xl text-[#8b8b80] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#2f6b45]">
                   ↗

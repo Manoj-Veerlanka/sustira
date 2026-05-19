@@ -32,7 +32,7 @@ export default function AboutPage() {
             <div className="rounded-[32px] bg-[#f4efe6] p-4">
               <div className="overflow-hidden rounded-[28px] bg-[#e6dfd2]">
                 <Image
-                  src="/images/founder.png"
+                  src="/images/courses/founder.png"
                   alt="Founder of Sustira"
                   width={900}
                   height={1200}

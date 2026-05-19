@@ -11,11 +11,11 @@ const courseData = {
       "A practical introductory course designed to help learners understand solar energy, its importance as an alternate energy source, and how renewable energy can support sustainable living and business opportunities.",
     image: "/images/courses/contentCourses/content-solar.png",
     demoFee: "₹499",
+    brochure: "/brochures/Sustira_Solar_Energy_Brochure.docx",
     quickPoints: [
       "Demo session available before enrollment",
       "Clean energy learning",
       "Beginner friendly",
-      "Practical direction",
     ],
     who: [
       "Entrepreneurs exploring green business ideas",
@@ -56,16 +56,16 @@ const courseData = {
   },
 
   "organic-seasonal-healthy-pickles": {
-    title: "Organic Seasonal Healthy Pickles and Vadiyas",
+    title: "Organic Seasonal Healthy Pickles",
     overview:
       "A guided course focused on making traditional, chemical-free seasonal pickles using natural ingredients, while connecting food preparation, nutrition, preservation, and product thinking.",
     image: "/images/courses/contentCourses/pickles.png",
-    demoFee: "₹199",
+    demoFee: "Coming Soon",
+    brochure: "/brochures/SUSTIRA_Seasonal_Healthy_Pickles_Brochure.docx",
     quickPoints: [
       "Demo session available before enrollment",
       "Seasonal product learning",
       "Beginner friendly",
-      "Practical direction",
     ],
     who: [
       "Homemakers interested in healthy product making",
@@ -111,11 +111,11 @@ const courseData = {
       "A structured introductory course that provides a practical overview of Environment, Health, and Safety within SAP. It helps learners understand compliance, sustainability, incident tracking, and workplace safety concepts in a real industry context.",
     image: "/images/courses/contentCourses/sap.png",
     demoFee: "₹299",
+    brochure: "/brochures/SUSTIRA_SAP_EHS_Brochure.docx",
     quickPoints: [
       "Weekend demo from 8–9 PM",
       "SAP EHS foundation",
       "Beginner friendly",
-      "Practical direction",
     ],
     who: [
       "Chemical engineers",
@@ -160,11 +160,11 @@ const courseData = {
       "A guided introductory course designed to help learners understand the practical side of soap-making through structured explanation, ingredient awareness, and supportive learning.",
     image: "/images/courses/contentCourses/soap.png",
     demoFee: "Coming Soon",
+    brochure: "/brochures/SUSTIRA_30_Day_Soap_Making_Brochure.docx",
     quickPoints: [
       "Demo session available before enrollment",
       "Ingredient awareness",
       "Beginner friendly",
-      "Practical direction",
     ],
     who: [
       "Beginners",
@@ -210,11 +210,11 @@ const courseData = {
       "A practical beginner-level course that introduces eco-friendly product creation, sustainable material thinking, and the foundations of product awareness in a simple and approachable way.",
     image: "/images/courses/contentCourses/beginner.png",
     demoFee: "Coming Soon",
+    brochure: "/brochures/sustira_eco_brochure.pdf",
     quickPoints: [
       "Beginner-friendly direction",
       "Sustainable material thinking",
       "Beginner friendly",
-      "Practical direction",
     ],
     who: [
       "Beginners",
@@ -260,11 +260,11 @@ const courseData = {
       "A practical introductory course designed to help learners think about how a skill or product idea can connect to a small-scale business opportunity in a simple and realistic way.",
     image: "/images/courses/contentCourses/ecoproducts.png",
     demoFee: "Coming Soon",
+    brochure: "/brochures/SUSTIRA_COURSES_AND_ECO_PRODUCTS.pdf",
     quickPoints: [
       "Business basics",
       "Product opportunity thinking",
       "Beginner friendly",
-      "Practical direction",
     ],
     who: [
       "Aspiring entrepreneurs",
@@ -317,7 +317,6 @@ const quickPointIcons: Record<string, string> = {
   "Demo session available before enrollment": "📅",
   "Clean energy learning": "🌱",
   "Beginner friendly": "👤",
-  "Practical direction": "🔧",
   "Weekend demo from 8–9 PM": "📅",
   "SAP EHS foundation": "🌱",
   "Seasonal product learning": "🥭",
@@ -353,8 +352,7 @@ export default async function CourseDetailPage({
               className="object-cover object-center"
             />
 
-            <div className="absolute inset-0 bg-black/55" />
-               <div className="absolute inset-y-0 left-0 w-[65%] bg-gradient-to-r from-black/75 to-transparent" />
+           
 
             <div className="relative z-10 flex min-h-[520px] max-w-4xl flex-col justify-center px-6 py-10 md:px-12 md:py-14">
               <h1 className="text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl" 
@@ -374,7 +372,7 @@ export default async function CourseDetailPage({
       {/* Quick Points */}
       <section className="pb-10">
         <Container>
-          <div className="grid gap-4 rounded-[28px] border border-[#e7e0d4] bg-white p-4 sm:grid-cols-2 xl:grid-cols-6">
+          <div className="grid gap-4 rounded-[28px] border border-[#e7e0d4] bg-white p-4 sm:grid-cols-2 xl:grid-cols-3">
             <QuickPointCard icon="₹" text={`Demo Fee ${course.demoFee}`} />
 
             {course.quickPoints.map((point) => (
@@ -384,6 +382,16 @@ export default async function CourseDetailPage({
                 text={point}
               />
             ))}
+
+             <Link
+        href={course.brochure}
+        download
+        target="_blank"
+        className="flex min-h-[92px] items-center rounded-[22px] border border-[#2f6b45]/25 bg-[#fcfaf5] px-5 py-4 text-sm font-semibold leading-6 text-[#2f6b45] shadow-sm ring-1 ring-black/5 transition hover:bg-[#e8f2ec]"
+      >
+        <span className="mr-3 text-lg">📄</span>
+        <span>Download Brochure</span>
+      </Link>
 
             <Link
               href="/book-demo"
@@ -439,6 +447,81 @@ export default async function CourseDetailPage({
         </Container>
       </section>
 
+      {/* Pricing / What to Expect */}
+<section className="py-10">
+  <Container>
+    <div className="grid gap-6 md:grid-cols-3">
+      <PricingCard
+        label="Demo Session"
+        price={course.demoFee}
+        description="A simple starting point to understand the course style, teaching approach, and learning value before moving further."
+        points={[
+          "Introductory guided session",
+          "Understand the course flow",
+          "Clarify whether the path fits you",
+        ]}
+      />
+
+      <PricingCard
+        label="Full Course"
+        price="Custom / Varies"
+        description="Full course pricing may differ based on the learning track, materials, format, and depth of guidance involved."
+        points={[
+          "Course-specific learning journey",
+          "Practical product understanding",
+          "Guided support and outcomes",
+        ]}
+      />
+
+      <PricingCard
+        label="Consultation / Guidance"
+        price="On Request"
+        description="For users who want broader clarity around eco-product direction, learning choices, or early business guidance."
+        points={[
+          "Personalized discussion",
+          "Product direction support",
+          "Suitable next-step guidance",
+        ]}
+      />
+    </div>
+
+    <div className="mt-16 grid gap-10 rounded-[32px] bg-[#f4efe6] p-8 md:grid-cols-2 md:p-12">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2f6b45]">
+          Included
+        </p>
+
+        <h2 className="mt-4 max-w-lg text-3xl font-semibold leading-tight text-[#1f1f1a] md:text-4xl">
+          What users should expect at this stage.
+        </h2>
+
+        <p className="mt-6 max-w-xl text-base leading-7 text-[#5f5b53]">
+          Sustira is launching with a practical and simple model, so pricing
+          stays flexible where needed and clear where possible.
+        </p>
+      </div>
+
+      <div className="space-y-6 text-base leading-7 text-[#5f5b53]">
+        <p>
+          Demo pricing is intended to help users explore the learning style
+          before committing to deeper course participation.
+        </p>
+
+        <p>
+          Full course pricing may vary depending on the topic, scope, materials,
+          and format. Guidance-based support may also be offered depending on
+          the learner&apos;s needs.
+        </p>
+
+        <p>
+          As Sustira grows, pricing structures may become more detailed, but the
+          launch approach is intentionally simple.
+        </p>
+      </div>
+    </div>
+  </Container>
+</section>
+
       {/* Demo + Trainer */}
       <section className="py-10">
         <Container>
@@ -484,6 +567,40 @@ export default async function CourseDetailPage({
         </Container>
       </section>
     </main>
+  );
+}
+
+function PricingCard({
+  label,
+  price,
+  description,
+  points,
+}: {
+  label: string;
+  price: string;
+  description: string;
+  points: string[];
+}) {
+  return (
+    <div className="flex h-full flex-col rounded-[28px] border border-[#e7e0d4] bg-white p-6">
+      <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2f6b45]">
+        {label}
+      </p>
+
+      <h3 className="mt-5 text-3xl font-semibold text-[#1f1f1a]">
+        {price}
+      </h3>
+
+      <p className="mt-6 text-sm leading-7 text-[#5f5b53]">
+        {description}
+      </p>
+
+      <ul className="mt-8 space-y-4 text-sm leading-6 text-[#1f1f1a]">
+        {points.map((point) => (
+          <li key={point}>• {point}</li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

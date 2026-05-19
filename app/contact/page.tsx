@@ -31,7 +31,6 @@ export default function ContactPage() {
               <SectionHeading
                 eyebrow="Send a message"
                 title="Tell us what you are looking for."
-                description="This is a simple contact form for Phase 1. Later we can connect it to Supabase, email, or form handling."
               />
 
               <form className="mt-8 space-y-5">
@@ -145,37 +144,18 @@ export default function ContactPage() {
 
                   <div>
                     <p className="font-medium text-[#1f1f1a]">Phone</p>
-                    <p>+91 XXXXX XXXXX</p>
+                    <p>+91 9901050050</p>
                   </div>
 
                   <div>
                     <p className="font-medium text-[#1f1f1a]">Email</p>
-                    <p>hello@sustira.org</p>
+                    <p>sustira.org@gmail.com</p>
                   </div>
 
                   <div>
                     <p className="font-medium text-[#1f1f1a]">Location</p>
                     <p>Hyderabad, India</p>
                   </div>
-                </div>
-              </div>
-
-              <div className="rounded-[32px] bg-white p-6 md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#2f6b45]">
-                  Quick connect
-                </p>
-
-                <h2 className="mt-4 text-2xl font-semibold text-[#1f1f1a]">
-                  Prefer a faster conversation?
-                </h2>
-
-                <p className="mt-3 text-sm leading-6 text-[#5f5b53]">
-                  Use WhatsApp or book a demo to move ahead more quickly.
-                </p>
-
-                <div className="mt-6 flex flex-wrap gap-4">
-                  <Button label="WhatsApp Us" href="/contact" variant="secondary" />
-                  <Button label="Book a Demo" href="/book-demo" variant="secondary" />
                 </div>
               </div>
             </div>

@@ -31,7 +31,6 @@ export default function BookDemoPage() {
               <SectionHeading
                 eyebrow="Booking form"
                 title="Tell us a little about what you want to explore."
-                description="This is the early Phase 1 booking form. Later we will connect it to real submission flow, payments, and confirmation handling."
               />
 
               <form className="mt-8 space-y-5">
@@ -95,14 +94,29 @@ export default function BookDemoPage() {
                     <option value="" disabled>
                       Choose a course
                     </option>
-                    <option value="soap-making">Chemical-free Soap Making</option>
-                    <option value="pickle-making">Organic Pickle Making</option>
-                    <option value="eco-product-development">
-                      Eco-Product Development
-                    </option>
-                    <option value="eco-business-basics">
-                      Eco-Business Plan Basics
-                    </option>
+                    <option value="solar-energy-initiative">
+  Solar Energy Initiative
+</option>
+
+<option value="organic-seasonal-healthy-pickles">
+  Organic Seasonal Healthy Pickles
+</option>
+
+<option value="sap-ehs-basic-course-guidance">
+  SAP EHS Beginner Course Guidance
+</option>
+
+<option value="chemical-free-soap-making">
+  Chemical-Free Soap Making
+</option>
+
+<option value="eco-product-basics">
+  Eco Product Development
+</option>
+
+<option value="beginner-product-business-basics">
+  Beginner Product Business Guidance
+</option>
                   </select>
                 </div>
 
@@ -161,7 +175,7 @@ export default function BookDemoPage() {
 
                   <div>
                     <p className="font-medium text-[#1f1f1a]">Demo Fee</p>
-                    <p>₹299</p>
+                    <p>Varies by course</p>
                   </div>
 
                   <div>
@@ -176,16 +190,7 @@ export default function BookDemoPage() {
                 </div>
               </div>
 
-              <div className="rounded-[32px] bg-white p-6 md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#2f6b45]">
-                  Important note
-                </p>
-
-                <p className="mt-4 text-sm leading-6 text-[#5f5b53]">
-                  Payment and scheduling flow can be connected in the next phase
-                  using Razorpay, database storage, and confirmation logic.
-                </p>
-              </div>
+            
             </div>
           </div>
         </Container>

@@ -22,7 +22,6 @@ export default function CtaSection() {
           <div className="mt-8 flex flex-wrap gap-4">
             <Button label="Book a Demo" href="/book-demo" variant="secondary" />
             <Button label="Contact Us" href="/contact" variant="secondary" />
-            <Button label="WhatsApp Us" href="/contact" variant="secondary" />
           </div>
         </div>
       </Container>

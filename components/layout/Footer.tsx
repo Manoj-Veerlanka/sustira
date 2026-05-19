@@ -6,7 +6,6 @@ const mainLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "Courses", href: "/courses" },
-  { label: "Pricing", href: "/pricing" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -25,18 +24,13 @@ export function Footer() {
           <div className="flex flex-col items-start lg:-mt-1">
   <Link href="/" className="inline-flex items-center">
     <Image
-      src="/images/sustira-logo.png"
+      src="/images/footer-logo.png"
       alt="Sustira"
-      width={190}
+      width={170}
       height={60}
-      className="h-auto w-[150px] md:w-[170px]"
+      className="h-auto w-[300px] md:w-[300px]"
     />
   </Link>
-
-  <p className="mt-5 max-w-xs text-sm leading-8 text-[#5f5b53]">
-    Premium eco-product chemistry learning and launch support for founders,
-    makers, and curious learners.
-  </p>
 </div>
 
           <div>
@@ -81,26 +75,16 @@ export function Footer() {
             </h4>
             <ul className="mt-4 space-y-3 text-sm text-neutral-600">
               <li>
-                <a href="tel:+919999999999" className="transition hover:text-neutral-950">
-                  +91 99999 99999
+                <a href="tel:+919901050050" className="transition hover:text-neutral-950">
+                  +91 9901050050
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:hello@sustira.org"
+                  href="mailto:sustira.org@gmail.com"
                   className="transition hover:text-neutral-950"
                 >
-                  hello@sustira.org
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/919999999999"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="transition hover:text-neutral-950"
-                >
-                  WhatsApp Chat
+                 sustira.org@gmail.com
                 </a>
               </li>
               <li>Hyderabad, India</li>

@@ -7,7 +7,6 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "Courses", href: "/courses" },
-  { label: "Pricing", href: "/pricing" },
     { label: "Contact", href: "/contact" },
 ];
 
@@ -18,10 +17,10 @@ export function Navbar() {
         <div className="flex h-20 items-center justify-between gap-6">
            <Link href="/" className="flex items-center">
             <Image
-              src="/images/sustira-logo.png"
+              src="/images/sustira-logo-header.png"
               alt="Sustira"
-              width={180}
-              height={56}
+              width={150}
+              height={70}
               className="h-auto w-[160px] md:w-[180px]"
               priority
             />
