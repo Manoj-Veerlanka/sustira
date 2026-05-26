@@ -32,7 +32,7 @@ export default function AboutPage() {
             <div className="rounded-[32px] bg-[#f4efe6] p-4">
               <div className="overflow-hidden rounded-[28px] bg-[#e6dfd2]">
                 <Image
-                  src="/images/founder.png"
+                  src="/images/courses/founder.png"
                   alt="Founder of Sustira"
                   width={900}
                   height={1200}
@@ -190,6 +190,11 @@ export default function AboutPage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Button label="Book a Demo" href="/book-demo" variant="secondary" />
               <Button label="Contact Us" href="/contact" variant="secondary" />
+              <Button label="Chat on WhatsApp"
+                                  href="https://wa.me/919901050050?text=Hi%20Sustira%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20courses."
+                                  variant="secondary"
+                                  target="_blank"
+                                  rel="noopener noreferrer"/>
             </div>
           </div>
         </Container>

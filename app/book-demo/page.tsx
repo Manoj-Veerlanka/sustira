@@ -1,8 +1,75 @@
-import Button from "@/components/ui/Button";
+"use client";
+
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function BookDemoPage() {
+  const router = useRouter();
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      name: String(formData.get("name") || "").trim(),
+      phone: String(formData.get("phone") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      course: String(formData.get("course") || "").trim(),
+      city: String(formData.get("city") || "").trim(),
+      message: String(formData.get("message") || "").trim(),
+    };
+
+    const validationErrors: Record<string, string> = {};
+
+    if (payload.name.length < 2) {
+      validationErrors.name = "Name must be at least 2 characters";
+    }
+
+    if (!/^[A-Za-z\s]+$/.test(payload.name)) {
+      validationErrors.name = "Name should contain only letters";
+    }
+
+    if (!/^\+?[0-9]{10,15}$/.test(payload.phone)) {
+      validationErrors.phone = "Phone must be 10 to 15 digits";
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
+      validationErrors.email = "Please enter a valid email";
+    }
+
+    if (!payload.course) {
+      validationErrors.course = "Please select a course";
+    }
+
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    setErrors({});
+
+    const response = await fetch("/api/book-demo", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      alert("Something went wrong. Please try again.");
+      return;
+    }
+
+    form.reset();
+    router.push("/thank-you");
+  }
+
   return (
     <main className="bg-[#fcfaf5]">
       <section className="py-16 md:py-24">
@@ -31,23 +98,36 @@ export default function BookDemoPage() {
               <SectionHeading
                 eyebrow="Booking form"
                 title="Tell us a little about what you want to explore."
-                description="This is the early Phase 1 booking form. Later we will connect it to real submission flow, payments, and confirmation handling."
               />
 
-              <form className="mt-8 space-y-5">
+              <form onSubmit={handleSubmit} className="mt-8 space-y-5" noValidate>
                 <div>
                   <label
-                    htmlFor="fullName"
+                    htmlFor="name"
                     className="mb-2 block text-sm font-medium text-[#1f1f1a]"
                   >
                     Full Name
                   </label>
+
                   <input
-                    id="fullName"
+                    id="name"
+                    name="name"
                     type="text"
-                    placeholder="Enter your full name"
+                    required
+                    maxLength={40}
+                    placeholder="Enter your name"
+                    onInput={(e) => {
+                      e.currentTarget.value = e.currentTarget.value.replace(
+                        /[^A-Za-z\s]/g,
+                        ""
+                      );
+                    }}
                     className="w-full rounded-2xl border border-[#ddd4c7] bg-[#fcfaf5] px-4 py-3 text-sm text-[#1f1f1a] outline-none placeholder:text-[#8b857d] focus:border-[#2f6b45]"
                   />
+
+                  {errors.name && (
+                    <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                  )}
                 </div>
 
                 <div>
@@ -57,12 +137,23 @@ export default function BookDemoPage() {
                   >
                     Phone Number
                   </label>
+
                   <input
                     id="phone"
+                    name="phone"
                     type="tel"
-                    placeholder="Enter your phone number"
+                    required
+                    maxLength={10}
+                    placeholder="Enter your 10 digit phone number"
+                    onInput={(e) => {
+                      e.currentTarget.value = e.currentTarget.value.replace(/(?!^\+)[^0-9]/g,"");
+                    }}
                     className="w-full rounded-2xl border border-[#ddd4c7] bg-[#fcfaf5] px-4 py-3 text-sm text-[#1f1f1a] outline-none placeholder:text-[#8b857d] focus:border-[#2f6b45]"
                   />
+
+                  {errors.phone && (
+                    <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+                  )}
                 </div>
 
                 <div>
@@ -72,12 +163,20 @@ export default function BookDemoPage() {
                   >
                     Email
                   </label>
+
                   <input
                     id="email"
+                    name="email"
                     type="email"
+                    required
+                    maxLength={100}
                     placeholder="Enter your email address"
                     className="w-full rounded-2xl border border-[#ddd4c7] bg-[#fcfaf5] px-4 py-3 text-sm text-[#1f1f1a] outline-none placeholder:text-[#8b857d] focus:border-[#2f6b45]"
                   />
+
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                  )}
                 </div>
 
                 <div>
@@ -87,23 +186,40 @@ export default function BookDemoPage() {
                   >
                     Select Course
                   </label>
+
                   <select
                     id="course"
-                    className="w-full rounded-2xl border border-[#ddd4c7] bg-[#fcfaf5] px-4 py-3 text-sm text-[#1f1f1a] outline-none focus:border-[#2f6b45]"
+                    name="course"
+                    required
                     defaultValue=""
+                    className="w-full rounded-2xl border border-[#ddd4c7] bg-[#fcfaf5] px-4 py-3 text-sm text-[#1f1f1a] outline-none focus:border-[#2f6b45]"
                   >
                     <option value="" disabled>
                       Choose a course
                     </option>
-                    <option value="soap-making">Chemical-free Soap Making</option>
-                    <option value="pickle-making">Organic Pickle Making</option>
-                    <option value="eco-product-development">
-                      Eco-Product Development
+                    <option value="solar-energy-initiative">
+                      Solar Energy Initiative
                     </option>
-                    <option value="eco-business-basics">
-                      Eco-Business Plan Basics
+                    <option value="organic-seasonal-healthy-pickles">
+                      Organic Seasonal Healthy Pickles
+                    </option>
+                    <option value="sap-ehs-basic-course-guidance">
+                      SAP EHS Beginner Course Guidance
+                    </option>
+                    <option value="chemical-free-soap-making">
+                      Chemical-Free Soap Making
+                    </option>
+                    <option value="eco-product-basics">
+                      Eco Product Development
+                    </option>
+                    <option value="beginner-product-business-basics">
+                      Beginner Product Business Guidance
                     </option>
                   </select>
+
+                  {errors.course && (
+                    <p className="mt-1 text-sm text-red-600">{errors.course}</p>
+                  )}
                 </div>
 
                 <div>
@@ -113,9 +229,12 @@ export default function BookDemoPage() {
                   >
                     City
                   </label>
+
                   <input
                     id="city"
+                    name="city"
                     type="text"
+                    maxLength={30}
                     placeholder="Enter your city"
                     className="w-full rounded-2xl border border-[#ddd4c7] bg-[#fcfaf5] px-4 py-3 text-sm text-[#1f1f1a] outline-none placeholder:text-[#8b857d] focus:border-[#2f6b45]"
                   />
@@ -128,16 +247,24 @@ export default function BookDemoPage() {
                   >
                     Anything you want us to know?
                   </label>
+
                   <textarea
                     id="message"
+                    name="message"
                     rows={5}
+                    maxLength={1000}
                     placeholder="Tell us your interest, questions, or preferred learning direction"
                     className="w-full rounded-2xl border border-[#ddd4c7] bg-[#fcfaf5] px-4 py-3 text-sm text-[#1f1f1a] outline-none placeholder:text-[#8b857d] focus:border-[#2f6b45]"
                   />
                 </div>
 
                 <div className="pt-2">
-                  <Button label="Continue to Confirmation" href="/thank-you" variant="primary" />
+                  <button
+                    type="submit"
+                    className="rounded-full bg-[#2f6b45] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#28593b]"
+                  >
+                    Continue to Confirmation
+                  </button>
                 </div>
               </form>
             </div>
@@ -161,7 +288,7 @@ export default function BookDemoPage() {
 
                   <div>
                     <p className="font-medium text-[#1f1f1a]">Demo Fee</p>
-                    <p>₹299</p>
+                    <p>Varies by course</p>
                   </div>
 
                   <div>
@@ -174,17 +301,6 @@ export default function BookDemoPage() {
                     <p>Move into the full course if it fits you</p>
                   </div>
                 </div>
-              </div>
-
-              <div className="rounded-[32px] bg-white p-6 md:p-8">
-                <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#2f6b45]">
-                  Important note
-                </p>
-
-                <p className="mt-4 text-sm leading-6 text-[#5f5b53]">
-                  Payment and scheduling flow can be connected in the next phase
-                  using Razorpay, database storage, and confirmation logic.
-                </p>
               </div>
             </div>
           </div>

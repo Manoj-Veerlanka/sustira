@@ -13,8 +13,6 @@ export default function HomePage() {
       <WhatIsSustiraSection />
       <FeaturedCoursesSection />
       <HowItWorksSection />
-      <FounderSection />
-      <ProductsPreviewSection />
       <CtaSection />
     </div>
   );
