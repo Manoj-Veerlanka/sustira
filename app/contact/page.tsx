@@ -35,7 +35,7 @@ export default function ContactPage() {
     }
 
     if (!/^\+?[0-9]{10,15}$/.test(payload.phone)) {
-      validationErrors.phone = "Phone must be 10 to 15 digits";
+      validationErrors.phone = "Phone must be 10 digits";
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
