@@ -11,7 +11,7 @@ const courseData = {
       "A practical introductory course designed to help learners understand solar energy, its importance as an alternate energy source, and how renewable energy can support sustainable living and business opportunities.",
     image: "/images/courses/contentCourses/content-solar.png",
     demoFee: "₹499",
-    brochure: "/brochures/Sustira_Solar_Energy_Brochure.docx",
+    brochure: "/brochures/Sustira_Solar_Energy_Brochure.pdf",
     quickPoints: [
       "Demo session available before enrollment",
       "Clean energy learning",
@@ -61,7 +61,7 @@ const courseData = {
       "A guided course focused on making traditional, chemical-free seasonal pickles using natural ingredients, while connecting food preparation, nutrition, preservation, and product thinking.",
     image: "/images/courses/contentCourses/pickles.png",
     demoFee: "Coming Soon",
-    brochure: "/brochures/SUSTIRA_Seasonal_Healthy_Pickles_Brochure.docx",
+    brochure: "/brochures/SUSTIRA_Seasonal_Healthy_Pickles_Brochure.pdf",
     quickPoints: [
       "Demo session available before enrollment",
       "Seasonal product learning",
@@ -111,7 +111,7 @@ const courseData = {
       "A structured introductory course that provides a practical overview of Environment, Health, and Safety within SAP. It helps learners understand compliance, sustainability, incident tracking, and workplace safety concepts in a real industry context.",
     image: "/images/courses/contentCourses/sap.png",
     demoFee: "₹299",
-    brochure: "/brochures/SUSTIRA_SAP_EHS_Brochure.docx",
+    brochure: "/brochures/SUSTIRA_SAP_EHS_Brochure.pdf",
     quickPoints: [
       "Weekend demo from 8–9 PM",
       "SAP EHS foundation",
