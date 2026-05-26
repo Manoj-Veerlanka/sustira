@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { bookDemoSchema } from "@/lib/validations/forms";
+import { executeD1Query } from "@/lib/d1";
 
 export async function POST(request: Request) {
   try {
@@ -39,6 +40,15 @@ if (!validation.success) {
 }
 
 const { name, email, phone, course, city, message } = validation.data;
+
+await executeD1Query(
+  `
+    INSERT INTO leads 
+    (form_type, name, email, phone, course, city, message)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
+  `,
+  ["book_demo", name, email, phone, course, city || null, message || null]
+);
 
     const { data, error } = await resend.emails.send({
       from: fromEmail,

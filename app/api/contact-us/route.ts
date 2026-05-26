@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 import { contactSchema } from "@/lib/validations/forms";
-
+import { executeD1Query } from "@/lib/d1";
 export async function POST(request: Request) {
   try {
     const resendApiKey = process.env.RESEND_API_KEY;
@@ -30,6 +30,22 @@ if (!validation.success) {
 }
 
 const { fullName, phone, email, city, interest, message } = validation.data;
+await executeD1Query(
+  `
+    INSERT INTO leads 
+    (form_type, name, email, phone, city, interest, message)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
+  `,
+  [
+    "contact_us",
+    fullName,
+    email,
+    phone,
+    city || null,
+    interest || null,
+    message,
+  ]
+);
 
     const { data, error } = await resend.emails.send({
       from: fromEmail,
