@@ -266,6 +266,11 @@ export default function CoursesPage() {
                 variant="secondary"
               />
               <Button href="/contact" label="Contact Us" variant="secondary" />
+              <Button label="Chat on WhatsApp"
+                                  href="https://wa.me/919901050050?text=Hi%20Sustira%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20courses."
+                                  variant="secondary"
+                                  target="_blank"
+                                  rel="noopener noreferrer"/>
             </div>
           </div>
         </Container>

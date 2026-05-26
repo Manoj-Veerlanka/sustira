@@ -1,8 +1,75 @@
-import Button from "@/components/ui/Button";
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function ContactPage() {
+  const router = useRouter();
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      fullName: String(formData.get("fullName") || "").trim(),
+      phone: String(formData.get("phone") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      city: String(formData.get("city") || "").trim(),
+      interest: String(formData.get("interest") || "").trim(),
+      message: String(formData.get("message") || "").trim(),
+    };
+
+    const validationErrors: Record<string, string> = {};
+
+    if (payload.fullName.length < 2) {
+      validationErrors.fullName = "Name must be at least 2 characters";
+    }
+
+    if (!/^[A-Za-z\s]+$/.test(payload.fullName)) {
+      validationErrors.fullName = "Name should contain only letters";
+    }
+
+    if (!/^\+?[0-9]{10,15}$/.test(payload.phone)) {
+      validationErrors.phone = "Phone must be 10 to 15 digits";
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
+      validationErrors.email = "Please enter a valid email";
+    }
+
+    if (payload.message.length < 5) {
+      validationErrors.message = "Message must be at least 5 characters";
+    }
+
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    setErrors({});
+
+    const response = await fetch("/api/contact-us", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      alert("Something went wrong. Please try again.");
+      return;
+    }
+
+    form.reset();
+    router.push("/thank-you");
+  }
+
   return (
     <main className="bg-[#fcfaf5]">
       <section className="py-16 md:py-24">
@@ -33,7 +100,7 @@ export default function ContactPage() {
                 title="Tell us what you are looking for."
               />
 
-              <form className="mt-8 space-y-5">
+              <form onSubmit={handleSubmit} className="mt-8 space-y-5" noValidate>
                 <div>
                   <label
                     htmlFor="fullName"
@@ -41,12 +108,28 @@ export default function ContactPage() {
                   >
                     Full Name
                   </label>
+
                   <input
                     id="fullName"
+                    name="fullName"
                     type="text"
+                    required
+                    maxLength={40}
                     placeholder="Enter your full name"
+                    onInput={(e) => {
+                      e.currentTarget.value = e.currentTarget.value.replace(
+                        /[^A-Za-z\s]/g,
+                        ""
+                      );
+                    }}
                     className="w-full rounded-2xl border border-[#ddd4c7] bg-[#fcfaf5] px-4 py-3 text-sm text-[#1f1f1a] outline-none placeholder:text-[#8b857d] focus:border-[#2f6b45]"
                   />
+
+                  {errors.fullName && (
+                    <p className="mt-1 text-sm text-red-600">
+                      {errors.fullName}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -56,12 +139,26 @@ export default function ContactPage() {
                   >
                     Phone Number
                   </label>
+
                   <input
                     id="phone"
+                    name="phone"
                     type="tel"
-                    placeholder="Enter your phone number"
+                    required
+                    maxLength={10}
+                    placeholder="Enter your 10 digit phone number"
+                    onInput={(e) => {
+                      e.currentTarget.value = e.currentTarget.value.replace(
+                        /(?!^\+)[^0-9]/g,
+                        ""
+                      );
+                    }}
                     className="w-full rounded-2xl border border-[#ddd4c7] bg-[#fcfaf5] px-4 py-3 text-sm text-[#1f1f1a] outline-none placeholder:text-[#8b857d] focus:border-[#2f6b45]"
                   />
+
+                  {errors.phone && (
+                    <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+                  )}
                 </div>
 
                 <div>
@@ -71,12 +168,20 @@ export default function ContactPage() {
                   >
                     Email
                   </label>
+
                   <input
                     id="email"
+                    name="email"
                     type="email"
+                    required
+                    maxLength={100}
                     placeholder="Enter your email address"
                     className="w-full rounded-2xl border border-[#ddd4c7] bg-[#fcfaf5] px-4 py-3 text-sm text-[#1f1f1a] outline-none placeholder:text-[#8b857d] focus:border-[#2f6b45]"
                   />
+
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                  )}
                 </div>
 
                 <div>
@@ -86,9 +191,12 @@ export default function ContactPage() {
                   >
                     City
                   </label>
+
                   <input
                     id="city"
+                    name="city"
                     type="text"
+                    maxLength={100}
                     placeholder="Enter your city"
                     className="w-full rounded-2xl border border-[#ddd4c7] bg-[#fcfaf5] px-4 py-3 text-sm text-[#1f1f1a] outline-none placeholder:text-[#8b857d] focus:border-[#2f6b45]"
                   />
@@ -101,9 +209,12 @@ export default function ContactPage() {
                   >
                     Interest Area
                   </label>
+
                   <input
                     id="interest"
+                    name="interest"
                     type="text"
+                    maxLength={200}
                     placeholder="Course, demo, materials, guidance..."
                     className="w-full rounded-2xl border border-[#ddd4c7] bg-[#fcfaf5] px-4 py-3 text-sm text-[#1f1f1a] outline-none placeholder:text-[#8b857d] focus:border-[#2f6b45]"
                   />
@@ -116,16 +227,31 @@ export default function ContactPage() {
                   >
                     Message
                   </label>
+
                   <textarea
                     id="message"
+                    name="message"
                     rows={5}
+                    required
+                    maxLength={1000}
                     placeholder="Tell us what you would like to know"
                     className="w-full rounded-2xl border border-[#ddd4c7] bg-[#fcfaf5] px-4 py-3 text-sm text-[#1f1f1a] outline-none placeholder:text-[#8b857d] focus:border-[#2f6b45]"
                   />
+
+                  {errors.message && (
+                    <p className="mt-1 text-sm text-red-600">
+                      {errors.message}
+                    </p>
+                  )}
                 </div>
 
                 <div className="pt-2">
-                  <Button label="Submit Enquiry" href="/thank-you" variant="primary" />
+                  <button
+                    type="submit"
+                    className="rounded-full bg-[#2f6b45] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#28583a]"
+                  >
+                    Submit Enquiry
+                  </button>
                 </div>
               </form>
             </div>
@@ -149,7 +275,7 @@ export default function ContactPage() {
 
                   <div>
                     <p className="font-medium text-[#1f1f1a]">Email</p>
-                    <p>sustira.org@gmail.com</p>
+                    <p>support@sustira.org</p>
                   </div>
 
                   <div>

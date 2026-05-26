@@ -10,7 +10,7 @@ export default function WhatIsSustiraSection() {
             <SectionHeading
               eyebrow="What is Sustira"
               title="A practical learning and launch platform for eco-product creators."
-              description="Sustira is an India-based, founder-led platform focused on chemistry-based practical learning, eco-friendly product development, and guided support for people who want to learn, create, and grow with confidence."
+              description="Sustira is an India-based, founder-led platform focused on step-by-step procedural learning, eco-friendly product development, and guided support for people who want to learn, create, and grow with confidence."
             />
           </div>
 
@@ -20,7 +20,7 @@ export default function WhatIsSustiraSection() {
                 Practical Learning
               </p>
               <p className="mt-3 text-sm leading-6 text-[#5f5b53]">
-                Understand product making through simple, hands-on chemistry-based learning.
+                Understand product making through simple, hands-on step-by-step procedural learning.
               </p>
             </div>
 
@@ -29,7 +29,9 @@ export default function WhatIsSustiraSection() {
                 Founder-Led Support
               </p>
               <p className="mt-3 text-sm leading-6 text-[#5f5b53]">
-                Learn in a warm and guided environment shaped by real product and business intent.
+                Learn through a warm, foundational approach focused on real-world growth.
+Build practical skills with guided support and long-term vision.
+Created to help you grow with confidence and purpose.
               </p>
             </div>
 
@@ -38,7 +40,7 @@ export default function WhatIsSustiraSection() {
                 Eco-Product Focus
               </p>
               <p className="mt-3 text-sm leading-6 text-[#5f5b53]">
-                Explore eco-conscious ideas like soaps, pickles, and other sustainable product paths.
+                Explore eco-conscious learning through soaps, healthy pickles, solar energy, SAP EHS, and sustainable product creation. Gain practical guidance to build real-world skills and beginner-friendly business ideas.
               </p>
             </div>
 
