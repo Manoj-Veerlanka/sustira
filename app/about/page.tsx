@@ -71,7 +71,7 @@ export default function AboutPage() {
                     <strong className="text-[#1f1f1a]">
                       B.Tech Chemical Engineering
                     </strong>{" "}
-                    — Dr. B V RAJU INSTITUTE OF TECHNOLOGY, Narsapur Medak District.
+                    — Padmasri  Dr. B V RAJU INSTITUTE OF TECHNOLOGY, Narsapur Medak District.
                   </p>
                 </div>
 
@@ -170,7 +170,7 @@ export default function AboutPage() {
                   <strong className="text-[#1f1f1a]">
                     B.Tech Chemical Engineering
                   </strong>{" "}
-                  — Dr. B V RAJU INSTITUTE OF TECHNOLOGY, Narsapur Medak District.
+                  — Padmasri  Dr. B V RAJU INSTITUTE OF TECHNOLOGY, Narsapur Medak District.
                 </p>
 
                 <p>
