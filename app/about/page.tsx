@@ -71,7 +71,7 @@ export default function AboutPage() {
                     <strong className="text-[#1f1f1a]">
                       B.Tech Chemical Engineering
                     </strong>{" "}
-                    — Padmasri  Dr. B V RAJU INSTITUTE OF TECHNOLOGY, Narsapur Medak District.
+                    — JNTU-affiliated institution.
                   </p>
                 </div>
 
@@ -147,13 +147,75 @@ export default function AboutPage() {
       <section className="bg-[#f4efe6] py-16 md:py-24">
         <Container>
           <SectionHeading
+            eyebrow="Leadership team"
+            title="A multidisciplinary team bringing sustainability, technology, business, and marketing expertise together."
+            description="Sustira combines environmental sustainability, enterprise technology, artificial intelligence, marketing, and renewable energy experience to create practical learning opportunities."
+          />
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="rounded-[28px] border border-[#e7e0d4] bg-white p-6">
+              <h3 className="text-xl font-semibold text-[#1f1f1a]">
+                N. V. N. Deepthi
+              </h3>
+
+              <p className="mt-2 text-sm font-medium uppercase tracking-[0.12em] text-[#2f6b45]">
+                Founder
+              </p>
+
+              <p className="mt-4 text-sm leading-7 text-[#5f5b53]">
+                Environmental Sustainability and EHS professional with 16+
+                years of experience in sustainability programs, SAP EHS/EHSM,
+                environmental compliance, circular economy initiatives, and
+                community development.
+              </p>
+            </div>
+
+            <div className="rounded-[28px] border border-[#e7e0d4] bg-white p-6">
+              <h3 className="text-xl font-semibold text-[#1f1f1a]">
+                Neelapalem Ramanjaneyulu
+              </h3>
+
+              <p className="mt-2 text-sm font-medium uppercase tracking-[0.12em] text-[#2f6b45]">
+                Co-Founder & Technology Advisor
+              </p>
+
+              <p className="mt-4 text-sm leading-7 text-[#5f5b53]">
+                B.Tech in Computer Science and Master&apos;s in Artificial
+                Intelligence with 20+ years of experience in SAP Business
+                Planning and Consolidation, SAP BW, enterprise analytics, data
+                platforms, and digital transformation.
+              </p>
+            </div>
+
+            <div className="rounded-[28px] border border-[#e7e0d4] bg-white p-6">
+              <h3 className="text-xl font-semibold text-[#1f1f1a]">
+                Joseph Mangam
+              </h3>
+
+              <p className="mt-2 text-sm font-medium uppercase tracking-[0.12em] text-[#2f6b45]">
+                Marketing Director
+              </p>
+
+              <p className="mt-4 text-sm leading-7 text-[#5f5b53]">
+                B.A. English graduate with 9+ years of experience in marketing,
+                sales, customer engagement, and renewable energy sectors,
+                including solar energy business outreach and market development.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <Container>
+          <SectionHeading
             eyebrow="Qualifications & project work"
             title="A strong foundation in environmental management, engineering, and sustainability-led research."
             description="Deepthi’s academic and professional journey combines environmental sustainability, chemical engineering, EHS systems, circular economy thinking, and practical project work."
           />
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <div className="rounded-[28px] bg-white p-6">
+            <div className="rounded-[28px] border border-[#e7e0d4] bg-white p-6">
               <h3 className="text-xl font-semibold text-[#1f1f1a]">
                 Academic qualifications
               </h3>
@@ -170,7 +232,7 @@ export default function AboutPage() {
                   <strong className="text-[#1f1f1a]">
                     B.Tech Chemical Engineering
                   </strong>{" "}
-                  — Padmasri  Dr. B V RAJU INSTITUTE OF TECHNOLOGY, Narsapur Medak District.
+                  — JNTU-affiliated institution.
                 </p>
 
                 <p>
@@ -181,7 +243,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="rounded-[28px] bg-white p-6">
+            <div className="rounded-[28px] border border-[#e7e0d4] bg-white p-6">
               <h3 className="text-xl font-semibold text-[#1f1f1a]">
                 Professional certifications
               </h3>
@@ -203,7 +265,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="rounded-[28px] bg-white p-6">
+            <div className="rounded-[28px] border border-[#e7e0d4] bg-white p-6">
               <h3 className="text-xl font-semibold text-[#1f1f1a]">
                 Carbon footprint reduction project
               </h3>
@@ -217,7 +279,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="rounded-[28px] bg-white p-6">
+            <div className="rounded-[28px] border border-[#e7e0d4] bg-white p-6">
               <h3 className="text-xl font-semibold text-[#1f1f1a]">
                 Waste tire recycling project
               </h3>
@@ -233,7 +295,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="bg-[#f4efe6] py-16 md:py-24">
         <Container>
           <SectionHeading
             eyebrow="Why Sustira started"
@@ -242,7 +304,7 @@ export default function AboutPage() {
           />
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <div className="rounded-[28px] border border-[#e7e0d4] bg-white p-6">
+            <div className="rounded-[28px] bg-white p-6">
               <h3 className="text-xl font-semibold text-[#1f1f1a]">
                 Practical learning
               </h3>
@@ -252,7 +314,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="rounded-[28px] border border-[#e7e0d4] bg-white p-6">
+            <div className="rounded-[28px] bg-white p-6">
               <h3 className="text-xl font-semibold text-[#1f1f1a]">
                 Sustainability-led thinking
               </h3>
@@ -263,7 +325,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="rounded-[28px] border border-[#e7e0d4] bg-white p-6">
+            <div className="rounded-[28px] bg-white p-6">
               <h3 className="text-xl font-semibold text-[#1f1f1a]">
                 Guided growth
               </h3>
@@ -276,7 +338,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-[#f4efe6] py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <Container>
           <div className="grid gap-10 md:grid-cols-2">
             <div>
