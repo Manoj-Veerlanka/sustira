@@ -60,7 +60,7 @@ const courses = [
       "Get introduced to practical thinking around taking a skill toward a possible product-based opportunity.",
     suitableFor:
       "Early-stage learners, aspiring creators, and beginners curious about product-based opportunities.",
-    demoFee: "299",
+    demoFee: "₹299",
     image: "/images/courses/business-basics.png",
   },
   {
