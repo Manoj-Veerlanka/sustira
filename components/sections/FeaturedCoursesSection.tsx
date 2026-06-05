@@ -27,7 +27,7 @@ const courses = [
     href: "/courses/beginner-product-business-basics",
     tags: [
       { label: "Business", tone: "green" },
-      { label: "Guidance", tone: "gold" },
+      { label: "Demo ₹299", tone: "gold" },
     ],
   },
   {

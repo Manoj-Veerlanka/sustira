@@ -52,6 +52,17 @@ const courses = [
     demoFee: "₹299",
     image: "/images/courses/sap-ehs.png",
   },
+   {
+    slug: "beginner-product-business-basics",
+    sector: "General",
+    title: "Beginner Product Business Basics",
+    description:
+      "Get introduced to practical thinking around taking a skill toward a possible product-based opportunity.",
+    suitableFor:
+      "Early-stage learners, aspiring creators, and beginners curious about product-based opportunities.",
+    demoFee: "299",
+    image: "/images/courses/business-basics.png",
+  },
   {
     slug: "chemical-free-soap-making",
     sector: "Health / Product",
@@ -73,17 +84,7 @@ const courses = [
     demoFee: "Coming Soon",
     image: "/images/courses/eco-product-basics.png",
   },
-  {
-    slug: "beginner-product-business-basics",
-    sector: "General",
-    title: "Beginner Product Business Basics",
-    description:
-      "Get introduced to practical thinking around taking a skill toward a possible product-based opportunity.",
-    suitableFor:
-      "Early-stage learners, aspiring creators, and beginners curious about product-based opportunities.",
-    demoFee: "Coming Soon",
-    image: "/images/courses/business-basics.png",
-  },
+ 
 ];
 
 export default function CoursesPage() {

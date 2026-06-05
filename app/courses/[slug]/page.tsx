@@ -259,7 +259,7 @@ const courseData = {
     overview:
       "A practical introductory course designed to help learners think about how a skill or product idea can connect to a small-scale business opportunity in a simple and realistic way.",
     image: "/images/courses/contentCourses/ecoproducts.png",
-    demoFee: "Coming Soon",
+    demoFee: "₹299",
     brochure: "/brochures/SUSTIRA_COURSES_AND_ECO_PRODUCTS.pdf",
     quickPoints: [
       "Business basics",
