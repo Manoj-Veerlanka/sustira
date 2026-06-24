@@ -29,7 +29,7 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button label="Book a Demo" href="/book-demo" variant="primary" />
+            <Button label="Book free Demo" href="/book-demo" variant="primary" />
             <Button
               label="Explore Courses"
               href="/courses"

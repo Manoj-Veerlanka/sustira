@@ -149,7 +149,7 @@ export default function PricingPage() {
               <Button label="Book a Demo" href="/book-demo" variant="secondary" />
               <Button label="Contact Us" href="/contact" variant="secondary" />
               <Button label="Chat on WhatsApp"
-                                  href="https://wa.me/919901050050?text=Hi%20Sustira%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20courses."
+                                  href="https://wa.me/918309965652?text=Hi%20Sustira%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20courses."
                                   variant="secondary"
                                   target="_blank"
                                   rel="noopener noreferrer"/>

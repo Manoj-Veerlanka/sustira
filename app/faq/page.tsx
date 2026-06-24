@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "Are demos paid?",
     answer:
-      "Yes, demo sessions are intended to be paid introductory sessions so learners can understand the approach before moving into a full course.",
+      "No, demo sessions are intended to be free introductory sessions so learners can understand the approach before moving into a full course.",
   },
   {
     question: "What happens after the demo?",
@@ -138,10 +138,10 @@ export default function FaqPage() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button label="Book a Demo" href="/book-demo" variant="secondary" />
+              <Button label="Book free Demo" href="/book-demo" variant="secondary" />
               <Button label="Contact Us" href="/contact" variant="secondary" />
               <Button label="Chat on WhatsApp"
-                                  href="https://wa.me/919901050050?text=Hi%20Sustira%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20courses."
+                                  href="https://wa.me/918309965652?text=Hi%20Sustira%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20courses."
                                   variant="secondary"
                                   target="_blank"
                                   rel="noopener noreferrer"/>

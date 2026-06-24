@@ -75,8 +75,8 @@ export function Footer() {
             </h4>
             <ul className="mt-4 space-y-3 text-sm text-neutral-600">
               <li>
-                <a href="tel:+919901050050" className="transition hover:text-neutral-950">
-                  +91 9901050050
+                <a href="tel:+918309965652" className="transition hover:text-neutral-950">
+                  +91 8309965652
                 </a>
               </li>
               <li>

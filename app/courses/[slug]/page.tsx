@@ -4,13 +4,16 @@ import Button from "@/components/ui/Button";
 import { notFound } from "next/navigation";
 import Container from "@/components/ui/Container";
 
+const freeDemoInfo =
+  "Start with a free demo session to understand the teaching style, course direction, and learning experience before moving further.";
+
 const courseData = {
   "solar-energy-initiative": {
     title: "Solar Energy Initiative",
     overview:
       "A practical introductory course designed to help learners understand solar energy, its importance as an alternate energy source, and how renewable energy can support sustainable living and business opportunities.",
     image: "/images/courses/contentCourses/content-solar.png",
-    demoFee: "₹499",
+    demoFee: "Free Demo Session",
     brochure: "/brochures/Sustira_Solar_Energy_Brochure.pdf",
     quickPoints: [
       "Demo session available before enrollment",
@@ -45,14 +48,14 @@ const courseData = {
     ],
     outcomeIcons: ["💡", "📘", "🎯", "🌿"],
     demoInfo:
-      "Start with a paid demo session to understand the teaching style, course direction, and practical value of the course.",
+      "Start with a free demo session to understand the teaching style, course direction, and practical value of the course.",
     trainerName: "N V N Deepthi",
     trainerRole: "Energy Educator & Sustainability Mentor",
-    trainerPhone: "9901050050",
+    trainerPhone: "8309965652",
     trainerImage: "/images/courses/founder.png",
     ctaHeading: "Ready to explore clean energy learning?",
     ctaSubtext:
-      "Book your demo session today and take the first step towards a more sustainable future.",
+      "Book your free demo session today and take the first step towards a more sustainable future.",
   },
 
   "organic-seasonal-healthy-pickles": {
@@ -60,7 +63,7 @@ const courseData = {
     overview:
       "A guided course focused on making traditional, chemical-free seasonal pickles using natural ingredients, while connecting food preparation, nutrition, preservation, and product thinking.",
     image: "/images/courses/contentCourses/pickles.png",
-    demoFee: "Coming Soon",
+    demoFee: "Free Demo Session",
     brochure: "/brochures/SUSTIRA_Seasonal_Healthy_Pickles_Brochure.pdf",
     quickPoints: [
       "Demo session available before enrollment",
@@ -94,15 +97,14 @@ const courseData = {
       "Connect Indian food heritage with simple entrepreneurship possibilities.",
     ],
     outcomeIcons: ["🌿", "🥭", "✅", "🏡"],
-    demoInfo:
-      "Start with a paid demo session to understand the teaching style, course direction, and hands-on learning approach.",
+    demoInfo: freeDemoInfo,
     trainerName: "N V N Deepthi",
     trainerRole: "Sustainability Mentor",
-    trainerPhone: "9901050050",
+    trainerPhone: "8309965652",
     trainerImage: "/images/courses/founder.png",
-    ctaHeading: "Start with a demo before you decide.",
+    ctaHeading: "Start with a free demo before you decide.",
     ctaSubtext:
-      "Book your demo session and understand whether this course is the right fit for your learning journey.",
+      "Book your free demo session and understand whether this course is the right fit for your learning journey.",
   },
 
   "sap-ehs-basic-course-guidance": {
@@ -110,7 +112,7 @@ const courseData = {
     overview:
       "A structured introductory course that provides a practical overview of Environment, Health, and Safety within SAP. It helps learners understand compliance, sustainability, incident tracking, and workplace safety concepts in a real industry context.",
     image: "/images/courses/contentCourses/sap.png",
-    demoFee: "₹299",
+    demoFee: "Free Demo Session",
     brochure: "/brochures/SUSTIRA_SAP_EHS_Brochure.pdf",
     quickPoints: [
       "Weekend demo from 8–9 PM",
@@ -144,14 +146,14 @@ const courseData = {
       "Understand how SAP can support structured EHS process management.",
     ],
     outcomeIcons: ["🛡️", "🌿", "✅", "⚙️"],
-    demoInfo: "2 days demo, 1 hour each, on weekends from 8 to 9 PM.",
+    demoInfo: "2 days free demo, 1 hour each, on weekends from 8 to 9 PM.",
     trainerName: "N V N Deepthi",
     trainerRole: "EHS Specialist",
-    trainerPhone: "9901050050",
+    trainerPhone: "8309965652",
     trainerImage: "/images/courses/founder.png",
-    ctaHeading: "Start with a demo before you decide.",
+    ctaHeading: "Start with a free demo before you decide.",
     ctaSubtext:
-      "Book your demo session and understand whether this course is the right fit for your learning journey.",
+      "Book your free demo session and understand whether this course is the right fit for your learning journey.",
   },
 
   "chemical-free-soap-making": {
@@ -159,7 +161,7 @@ const courseData = {
     overview:
       "A guided introductory course designed to help learners understand the practical side of soap-making through structured explanation, ingredient awareness, and supportive learning.",
     image: "/images/courses/contentCourses/soap.png",
-    demoFee: "Coming Soon",
+    demoFee: "Free Demo Session",
     brochure: "/brochures/SUSTIRA_30_Day_Soap_Making_Brochure.docx",
     quickPoints: [
       "Demo session available before enrollment",
@@ -193,15 +195,14 @@ const courseData = {
       "Develop early product-thinking awareness for future learning.",
     ],
     outcomeIcons: ["🧼", "✅", "🌿", "📘"],
-    demoInfo:
-      "Start with a paid demo session to understand the teaching style, course direction, and learning experience.",
+    demoInfo: freeDemoInfo,
     trainerName: "N V N Deepthi",
     trainerRole: "Sustainability Mentor",
-    trainerPhone: "9901050050",
+    trainerPhone: "8309965652",
     trainerImage: "/images/courses/founder.png",
-    ctaHeading: "Start with a demo before you decide.",
+    ctaHeading: "Start with a free demo before you decide.",
     ctaSubtext:
-      "Book your demo session and understand whether this course is the right fit for your learning journey.",
+      "Book your free demo session and understand whether this course is the right fit for your learning journey.",
   },
 
   "eco-product-basics": {
@@ -209,7 +210,7 @@ const courseData = {
     overview:
       "A practical beginner-level course that introduces eco-friendly product creation, sustainable material thinking, and the foundations of product awareness in a simple and approachable way.",
     image: "/images/courses/contentCourses/beginner.png",
-    demoFee: "Coming Soon",
+    demoFee: "Free Demo Session",
     brochure: "/brochures/sustira_eco_brochure.pdf",
     quickPoints: [
       "Beginner-friendly direction",
@@ -243,15 +244,14 @@ const courseData = {
       "Prepare for future practical product-focused learning paths.",
     ],
     outcomeIcons: ["🌿", "✅", "♻️", "📘"],
-    demoInfo:
-      "Start with a paid demo session to understand the learning style, course direction, and whether this path fits your interests.",
+    demoInfo: freeDemoInfo,
     trainerName: "N V N Deepthi",
     trainerRole: "Sustainability Mentor",
-    trainerPhone: "9901050050",
+    trainerPhone: "8309965652",
     trainerImage: "/images/courses/founder.png",
-    ctaHeading: "Start with a demo before you decide.",
+    ctaHeading: "Start with a free demo before you decide.",
     ctaSubtext:
-      "Book your demo session and understand whether this course is the right fit for your learning journey.",
+      "Book your free demo session and understand whether this course is the right fit for your learning journey.",
   },
 
   "beginner-product-business-basics": {
@@ -259,7 +259,7 @@ const courseData = {
     overview:
       "A practical introductory course designed to help learners think about how a skill or product idea can connect to a small-scale business opportunity in a simple and realistic way.",
     image: "/images/courses/contentCourses/ecoproducts.png",
-    demoFee: "₹299",
+    demoFee: "Free Demo Session",
     brochure: "/brochures/SUSTIRA_COURSES_AND_ECO_PRODUCTS.pdf",
     quickPoints: [
       "Business basics",
@@ -293,15 +293,14 @@ const courseData = {
       "Build a simple foundation for future eco-business learning.",
     ],
     outcomeIcons: ["💼", "✅", "🌱", "📘"],
-    demoInfo:
-      "Start with a paid demo session to understand the course direction and whether this path is suitable for your goals.",
+    demoInfo: freeDemoInfo,
     trainerName: "N V N Deepthi",
     trainerRole: "Sustainability Mentor",
-    trainerPhone: "9901050050",
+    trainerPhone: "8309965652",
     trainerImage: "/images/courses/founder.png",
-    ctaHeading: "Start with a demo before you decide.",
+    ctaHeading: "Start with a free demo before you decide.",
     ctaSubtext:
-      "Book your demo session and understand whether this course is the right fit for your learning journey.",
+      "Book your free demo session and understand whether this course is the right fit for your learning journey.",
   },
 } as const;
 
@@ -339,7 +338,6 @@ export default async function CourseDetailPage({
 
   return (
     <main className="bg-[#fcfaf5]">
-      {/* Hero */}
       <section className="py-10">
         <Container>
           <div className="relative min-h-[520px] overflow-hidden rounded-[28px] border border-[#e7e0d4] bg-[#f4efe6]">
@@ -352,16 +350,24 @@ export default async function CourseDetailPage({
               className="object-cover object-center"
             />
 
-           
-
             <div className="relative z-10 flex min-h-[520px] max-w-4xl flex-col justify-center px-6 py-10 md:px-12 md:py-14">
-              <h1 className="text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl" 
-               style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.8)' }}>
+              <h1
+                className="text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl"
+                style={{
+                  textShadow:
+                    "2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.8)",
+                }}
+              >
                 {course.title}
               </h1>
 
-              <p className="mt-6 max-w-3xl text-base font-medium leading-8 text-white md:text-xl"
-                 style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.95), 0 0 15px rgba(0,0,0,0.9)' }}>
+              <p
+                className="mt-6 max-w-3xl text-base font-medium leading-8 text-white md:text-xl"
+                style={{
+                  textShadow:
+                    "1px 1px 6px rgba(0,0,0,0.95), 0 0 15px rgba(0,0,0,0.9)",
+                }}
+              >
                 {course.overview}
               </p>
             </div>
@@ -369,11 +375,10 @@ export default async function CourseDetailPage({
         </Container>
       </section>
 
-      {/* Quick Points */}
       <section className="pb-10">
         <Container>
           <div className="grid gap-4 rounded-[28px] border border-[#e7e0d4] bg-white p-4 sm:grid-cols-2 xl:grid-cols-3">
-            <QuickPointCard icon="₹" text={`Demo Fee ${course.demoFee}`} />
+            <QuickPointCard icon="🎁" text={course.demoFee} />
 
             {course.quickPoints.map((point) => (
               <QuickPointCard
@@ -383,27 +388,26 @@ export default async function CourseDetailPage({
               />
             ))}
 
-             <Link
-        href={course.brochure}
-        download
-        target="_blank"
-        className="flex min-h-[92px] items-center rounded-[22px] border border-[#2f6b45]/25 bg-[#fcfaf5] px-5 py-4 text-sm font-semibold leading-6 text-[#2f6b45] shadow-sm ring-1 ring-black/5 transition hover:bg-[#e8f2ec]"
-      >
-        <span className="mr-3 text-lg">📄</span>
-        <span>Download Brochure</span>
-      </Link>
+            <Link
+              href={course.brochure}
+              download
+              target="_blank"
+              className="flex min-h-[92px] items-center rounded-[22px] border border-[#2f6b45]/25 bg-[#fcfaf5] px-5 py-4 text-sm font-semibold leading-6 text-[#2f6b45] shadow-sm ring-1 ring-black/5 transition hover:bg-[#e8f2ec]"
+            >
+              <span className="mr-3 text-lg">📄</span>
+              <span>Download Brochure</span>
+            </Link>
 
             <Link
               href="/book-demo"
               className="flex min-h-[92px] items-center justify-center rounded-[22px] bg-[#2f6b45] px-6 py-5 text-base font-semibold text-white transition hover:bg-[#285a3a]"
             >
-              Book a Demo →
+              Book a Free Demo →
             </Link>
           </div>
         </Container>
       </section>
 
-      {/* Who + Learn */}
       <section className="py-10">
         <Container>
           <div className="grid gap-6 md:grid-cols-2">
@@ -422,7 +426,6 @@ export default async function CourseDetailPage({
         </Container>
       </section>
 
-      {/* Key Outcomes */}
       <section className="py-10">
         <Container>
           <div className="text-center">
@@ -447,90 +450,85 @@ export default async function CourseDetailPage({
         </Container>
       </section>
 
-      {/* Pricing / What to Expect */}
-<section className="py-10">
-  <Container>
-    <div className="grid gap-6 md:grid-cols-3">
-      <PricingCard
-        label="Demo Session"
-        price={course.demoFee}
-        description="A simple starting point to understand the course style, teaching approach, and learning value before moving further."
-        points={[
-          "Introductory guided session",
-          "Understand the course flow",
-          "Clarify whether the path fits you",
-        ]}
-      />
+      <section className="py-10">
+        <Container>
+          <div className="grid gap-6 md:grid-cols-3">
+            <PricingCard
+              label="Demo Session"
+              price={course.demoFee}
+              description="A free starting point to understand the course style, teaching approach, and learning value before moving further."
+              points={[
+                "Free introductory guided session",
+                "Understand the course flow",
+                "Clarify whether the path fits you",
+              ]}
+            />
 
-      <PricingCard
-        label="Full Course"
-        price="Custom / Varies"
-        description="Full course pricing may differ based on the learning track, materials, format, and depth of guidance involved."
-        points={[
-          "Course-specific learning journey",
-          "Practical product understanding",
-          "Guided support and outcomes",
-        ]}
-      />
+            <PricingCard
+              label="Full Course"
+              price="Custom / Varies"
+              description="Full course pricing may differ based on the learning track, materials, format, and depth of guidance involved."
+              points={[
+                "Course-specific learning journey",
+                "Practical product understanding",
+                "Guided support and outcomes",
+              ]}
+            />
 
-      <PricingCard
-        label="Consultation / Guidance"
-        price="On Request"
-        description="For users who want broader clarity around eco-product direction, learning choices, or early business guidance."
-        points={[
-          "Personalized discussion",
-          "Product direction support",
-          "Suitable next-step guidance",
-        ]}
-      />
-    </div>
+            <PricingCard
+              label="Consultation / Guidance"
+              price="On Request"
+              description="For users who want broader clarity around eco-product direction, learning choices, or early business guidance."
+              points={[
+                "Personalized discussion",
+                "Product direction support",
+                "Suitable next-step guidance",
+              ]}
+            />
+          </div>
 
-    <div className="mt-16 grid gap-10 rounded-[32px] bg-[#f4efe6] p-8 md:grid-cols-2 md:p-12">
-      <div>
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2f6b45]">
-          Included
-        </p>
+          <div className="mt-16 grid gap-10 rounded-[32px] bg-[#f4efe6] p-8 md:grid-cols-2 md:p-12">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2f6b45]">
+                Included
+              </p>
 
-        <h2 className="mt-4 max-w-lg text-3xl font-semibold leading-tight text-[#1f1f1a] md:text-4xl">
-          What users should expect at this stage.
-        </h2>
+              <h2 className="mt-4 max-w-lg text-3xl font-semibold leading-tight text-[#1f1f1a] md:text-4xl">
+                What users should expect at this stage.
+              </h2>
 
-        <p className="mt-6 max-w-xl text-base leading-7 text-[#5f5b53]">
-          Sustira is launching with a practical and simple model, so pricing
-          stays flexible where needed and clear where possible.
-        </p>
-      </div>
+              <p className="mt-6 max-w-xl text-base leading-7 text-[#5f5b53]">
+                Sustira is launching with a practical and simple model. Demo
+                sessions are free, while full course pricing may vary based on
+                the course type, materials, format, and depth of guidance.
+              </p>
+            </div>
 
-      <div className="space-y-6 text-base leading-7 text-[#5f5b53]">
-        <p>
-          Demo pricing is intended to help users explore the learning style
-          before committing to deeper course participation.
-        </p>
+            <div className="space-y-6 text-base leading-7 text-[#5f5b53]">
+              <p>
+                The free demo session is intended to help users explore the
+                learning style before committing to deeper course participation.
+              </p>
 
-        <p>
-          Full course pricing may vary depending on the topic, scope, materials,
-          and format. Guidance-based support may also be offered depending on
-          the learner&apos;s needs.
-        </p>
+              <p>
+                Full course pricing may vary depending on the topic, scope,
+                materials, and format. Guidance-based support may also be
+                offered depending on the learner&apos;s needs.
+              </p>
 
-        <p>
-          As Sustira grows, pricing structures may become more detailed, but the
-          launch approach is intentionally simple.
-        </p>
-      </div>
-    </div>
-  </Container>
-</section>
+              <p>
+                As Sustira grows, pricing structures may become more detailed,
+                but the launch approach is intentionally simple.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
 
-      {/* Demo + Trainer */}
       <section className="py-10">
         <Container>
           <div className="grid gap-6 md:grid-cols-2">
-            <InfoCard
-              icon="📅"
-              title="Demo Information"
-              text={course.demoInfo}
-            />
+            <InfoCard icon="📅" title="Demo Information" text={course.demoInfo} />
 
             <TrainerCard
               image={course.trainerImage}
@@ -542,8 +540,7 @@ export default async function CourseDetailPage({
         </Container>
       </section>
 
-      {/* CTA Banner */}
-<section className="py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <Container>
           <div className="rounded-[32px] bg-[#2f6b45] px-6 py-10 text-white md:px-10 md:py-14">
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-white/80">
@@ -551,16 +548,20 @@ export default async function CourseDetailPage({
             </p>
 
             <h2 className="mt-4 max-w-2xl text-3xl font-semibold leading-tight md:text-4xl">
-              Start with a demo before you decide.
+              Start with a free demo before you decide.
             </h2>
 
             <p className="mt-4 max-w-2xl text-sm leading-6 text-white/85 md:text-base">
-              Explore the course details, understand the topic, and book a demo
-              to find the right path for you.
+              Explore the course details, understand the topic, and book a free
+              demo to find the right path for you.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="/book-demo" label="Book a Demo" variant="secondary" />
+              <Button
+                href="/book-demo"
+                label="Book a Free Demo"
+                variant="secondary"
+              />
               <Button href="/contact" label="Contact Us" variant="secondary" />
             </div>
           </div>
@@ -587,13 +588,9 @@ function PricingCard({
         {label}
       </p>
 
-      <h3 className="mt-5 text-3xl font-semibold text-[#1f1f1a]">
-        {price}
-      </h3>
+      <h3 className="mt-5 text-3xl font-semibold text-[#1f1f1a]">{price}</h3>
 
-      <p className="mt-6 text-sm leading-7 text-[#5f5b53]">
-        {description}
-      </p>
+      <p className="mt-6 text-sm leading-7 text-[#5f5b53]">{description}</p>
 
       <ul className="mt-8 space-y-4 text-sm leading-6 text-[#1f1f1a]">
         {points.map((point) => (

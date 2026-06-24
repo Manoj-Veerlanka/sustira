@@ -10,9 +10,9 @@ const steps = [
   },
   {
     number: "02",
-    title: "Book a demo",
+    title: "Book a free demo",
     description:
-      "Start with a simple paid demo session to understand the course style, approach, and value.",
+      "Start with a free demo session to understand the course style, approach, and value.",
   },
   {
     number: "03",
