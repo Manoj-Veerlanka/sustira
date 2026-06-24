@@ -76,7 +76,7 @@ export default function BookDemoPage() {
         <Container>
           <div className="max-w-3xl">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#2f6b45]">
-              Book a Demo
+              Book a free Demo
             </p>
 
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-[#1f1f1a] md:text-6xl">
@@ -288,7 +288,7 @@ export default function BookDemoPage() {
 
                   <div>
                     <p className="font-medium text-[#1f1f1a]">Demo Fee</p>
-                    <p>Varies by course</p>
+                    <p>Free Demo Session</p>
                   </div>
 
                   <div>

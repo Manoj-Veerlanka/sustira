@@ -30,7 +30,7 @@ const courses = [
       "Learn basics of solar energy and its importance as alternate energy.",
     suitableFor:
       "Entrepreneurs, engineers, and learners who want to promote alternate energy sources.",
-    demoFee: "₹499",
+    demoFee: "Free Demo Session",
     image: "/images/courses/solar-energy.png",
   },
   {
@@ -39,7 +39,7 @@ const courses = [
     title: "Organic Seasonal Healthy Pickles",
     description: "How can a healthy seasonal organic product be made?",
     suitableFor: "Entrepreneurs, homemakers, and curious learners.",
-    demoFee: "₹199",
+    demoFee: "Free Demo Session",
     image: "/images/courses/healthy-pickles.png",
   },
   {
@@ -49,10 +49,10 @@ const courses = [
     description: "SAP EHS course highlights and basic foundation guidance.",
     suitableFor:
       "Students, professionals, compliance learners, and EHS aspirants.",
-    demoFee: "₹299",
+    demoFee: "Free Demo Session",
     image: "/images/courses/sap-ehs.png",
   },
-   {
+  {
     slug: "beginner-product-business-basics",
     sector: "General",
     title: "Beginner Product Business Basics",
@@ -60,7 +60,7 @@ const courses = [
       "Get introduced to practical thinking around taking a skill toward a possible product-based opportunity.",
     suitableFor:
       "Early-stage learners, aspiring creators, and beginners curious about product-based opportunities.",
-    demoFee: "₹299",
+    demoFee: "Free Demo Session",
     image: "/images/courses/business-basics.png",
   },
   {
@@ -71,7 +71,7 @@ const courses = [
       "Learn the basics of soap-making, ingredients, process understanding, and practical product awareness.",
     suitableFor:
       "Beginners, homemakers, product enthusiasts, and aspiring small-scale creators.",
-    demoFee: "Coming Soon",
+    demoFee: "Free Demo Session",
     image: "/images/courses/soap-making.png",
   },
   {
@@ -81,52 +81,51 @@ const courses = [
     description:
       "Explore foundational concepts in eco-friendly product creation and sustainable material thinking.",
     suitableFor: "Beginners and curious learners exploring eco-product ideas.",
-    demoFee: "Coming Soon",
+    demoFee: "Free Demo Session",
     image: "/images/courses/eco-product-basics.png",
   },
- 
 ];
 
 export default function CoursesPage() {
   return (
     <main className="bg-[#fcfaf5]">
       {/* Hero */}
-<section className="py-16 md:py-24">
-  <Container>
-    <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-      {/* Left content */}
-      <div>
-        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#2f6b45]">
-          Courses
-        </p>
+      <section className="py-16 md:py-24">
+        <Container>
+          <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+            {/* Left content */}
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#2f6b45]">
+                Courses
+              </p>
 
-        <h1 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-[#1f1f1a] md:text-5xl xl:text-6xl">
-          Learn. Create. Sustain.
-        </h1>
+              <h1 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-[#1f1f1a] md:text-5xl xl:text-6xl">
+                Learn. Create. Sustain.
+              </h1>
 
-        <p className="mt-8 max-w-2xl text-base leading-8 text-[#5f5b53] md:text-lg">
-          Whether you want to build a green business, learn new skills, or
-          contribute to the environment — Sustira gives you the tools to create
-          real impact.
-        </p>
-      </div>
+              <p className="mt-8 max-w-2xl text-base leading-8 text-[#5f5b53] md:text-lg">
+                Whether you want to build a green business, learn new skills, or
+                contribute to the environment — Sustira gives you the tools to
+                create real impact.
+              </p>
+            </div>
 
-      {/* Right image */}
-      <div className="flex justify-center lg:justify-end">
-        <div className="relative h-[260px] w-full max-w-[520px] overflow-hidden rounded-[36px] bg-[#f4efe6] shadow-sm ring-1 ring-[#e7e0d4] md:h-[340px]">
-          <Image
-            src="/images/courses/coursehero.png"
-            alt="Eco-product learning with natural materials"
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 520px"
-            className="object-cover"
-          />
-        </div>
-      </div>
-    </div>
-  </Container>
-</section>
+            {/* Right image */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative h-[260px] w-full max-w-[520px] overflow-hidden rounded-[36px] bg-[#f4efe6] shadow-sm ring-1 ring-[#e7e0d4] md:h-[340px]">
+                <Image
+                  src="/images/courses/coursehero.png"
+                  alt="Eco-product learning with natural materials"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 520px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
 
       {/* Focus Areas */}
       <section className="py-16 md:py-20">
@@ -214,7 +213,7 @@ export default function CoursesPage() {
                   <div className="mt-auto">
                     <div className="flex items-center justify-between rounded-2xl bg-[#f4efe6] px-4 py-3">
                       <span className="text-sm font-medium text-[#5f5b53]">
-                        Demo Fee
+                        Demo
                       </span>
                       <span className="text-sm font-semibold text-[#1f1f1a]">
                         {course.demoFee}
@@ -231,7 +230,7 @@ export default function CoursesPage() {
 
                       <Button
                         href="/book-demo"
-                        label="Book Demo"
+                        label="Book Free Demo"
                         variant="primary"
                       />
                     </div>
@@ -252,26 +251,28 @@ export default function CoursesPage() {
             </p>
 
             <h2 className="mt-4 max-w-2xl text-3xl font-semibold leading-tight md:text-4xl">
-              Start with a demo before you decide.
+              Start with a free demo before you decide.
             </h2>
 
             <p className="mt-4 max-w-2xl text-sm leading-6 text-white/85 md:text-base">
-              Explore the course details, understand the topic, and book a demo
-              to find the right path for you.
+              Explore the course details, understand the topic, and book a free
+              demo to find the right path for you.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Button
                 href="/book-demo"
-                label="Book a Demo"
+                label="Book a Free Demo"
                 variant="secondary"
               />
               <Button href="/contact" label="Contact Us" variant="secondary" />
-              <Button label="Chat on WhatsApp"
-                                  href="https://wa.me/919901050050?text=Hi%20Sustira%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20courses."
-                                  variant="secondary"
-                                  target="_blank"
-                                  rel="noopener noreferrer"/>
+              <Button
+                label="Chat on WhatsApp"
+                href="https://wa.me/918309965652?text=Hi%20Sustira%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20courses."
+                variant="secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              />
             </div>
           </div>
         </Container>

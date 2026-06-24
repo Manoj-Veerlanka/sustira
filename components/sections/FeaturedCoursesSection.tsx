@@ -9,7 +9,7 @@ const courses = [
     href: "/courses/solar-energy-initiative",
     tags: [
       { label: "Environment", tone: "green" },
-      { label: "Demo ₹499", tone: "gold" },
+      { label: "Free Demo", tone: "gold" },
     ],
   },
   {
@@ -18,16 +18,16 @@ const courses = [
     href: "/courses/sap-ehs-basic-course-guidance",
     tags: [
       { label: "Safety", tone: "green" },
-      { label: "Demo ₹299", tone: "gold" },
+      { label: "Free Demo", tone: "gold" },
     ],
   },
-   {
+  {
     number: "03",
     title: "Beginner Product Business Guidance",
     href: "/courses/beginner-product-business-basics",
     tags: [
       { label: "Business", tone: "green" },
-      { label: "Demo ₹299", tone: "gold" },
+      { label: "Free Demo", tone: "gold" },
     ],
   },
   {
@@ -36,17 +36,16 @@ const courses = [
     href: "/courses/organic-seasonal-healthy-pickles",
     tags: [
       { label: "Health", tone: "teal" },
-      { label: "Coming Soon", tone: "teal" },
+      { label: "Free Demo", tone: "gold" },
     ],
   },
-  
   {
     number: "05",
     title: "Chemical-Free Soap Making",
     href: "/courses/chemical-free-soap-making",
     tags: [
       { label: "Product", tone: "teal" },
-      { label: "Coming Soon", tone: "teal" },
+      { label: "Free Demo", tone: "gold" },
     ],
   },
   {
@@ -55,10 +54,9 @@ const courses = [
     href: "/courses/eco-product-basics",
     tags: [
       { label: "Basics", tone: "teal" },
-      { label: "Coming Soon", tone: "teal" },
+      { label: "Free Demo", tone: "gold" },
     ],
   },
- 
 ];
 
 type TagTone = "green" | "gold" | "teal";
@@ -76,7 +74,7 @@ export default function FeaturedCoursesSection() {
         <SectionHeading
           eyebrow="Featured Courses"
           title="Explore practical courses designed for eco-product learning."
-          description="Sustira offers beginner-friendly learning paths across environment, health, safety, product creation, and eco-business guidance."
+          description="Sustira offers beginner-friendly learning paths across environment, health, safety, product creation, and eco-business guidance. Start with a free demo before choosing your course."
           align="center"
         />
 

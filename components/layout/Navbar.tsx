@@ -39,7 +39,7 @@ export function Navbar() {
           </nav>
 
          <div className="hidden md:block">
-            <Button href="/book-demo" label="Book a Demo" />
+            <Button href="/book-demo" label="Book free Demo" />
           </div>
 
           <div className="md:hidden">
